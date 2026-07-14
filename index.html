@@ -5,8 +5,6 @@
 
 <meta charset="UTF-8">
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
@@ -19,9 +17,9 @@ CASO UMERES
 
 <style>
 
-/****************************************************
-RESET
-****************************************************/
+/*********************************************************
+CONFIGURACIÓN GENERAL
+**********************************************************/
 
 *{
 
@@ -31,13 +29,9 @@ box-sizing:border-box;
 
 }
 
-/****************************************************
-BODY
-****************************************************/
-
 body{
 
-background:#d9d9d9;
+background:#d7d7d7;
 
 font-family:"Times New Roman",serif;
 
@@ -45,13 +39,13 @@ font-size:13pt;
 
 line-height:1.8;
 
-color:#000;
+color:#111;
 
 }
 
-/****************************************************
-A4
-****************************************************/
+/*********************************************************
+HOJA A4
+**********************************************************/
 
 .page{
 
@@ -59,7 +53,7 @@ width:210mm;
 
 min-height:297mm;
 
-margin:15px auto;
+margin:18px auto;
 
 background:#fff;
 
@@ -80,19 +74,107 @@ page-break-after:always;
 
 }
 
-/****************************************************
-TEXTOS
-****************************************************/
+/*********************************************************
+ENCABEZADO
+**********************************************************/
 
-h1{
+.header{
 
-font-size:20px;
+border-bottom:2px solid #8B0000;
 
-font-weight:bold;
+padding-bottom:8px;
+
+margin-bottom:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.header-left{
+
+width:15%;
+
+text-align:left;
+
+}
+
+.header-center{
+
+width:70%;
 
 text-align:center;
 
-margin-bottom:10px;
+}
+
+.header-right{
+
+width:15%;
+
+text-align:right;
+
+font-size:10pt;
+
+}
+
+.header-center h2{
+
+font-size:17pt;
+
+margin:0;
+
+}
+
+.header-center h3{
+
+font-size:12pt;
+
+font-weight:normal;
+
+margin-top:4px;
+
+}
+
+/*********************************************************
+PIE
+**********************************************************/
+
+.footer{
+
+position:absolute;
+
+bottom:10mm;
+
+left:20mm;
+
+right:20mm;
+
+border-top:2px solid #8B0000;
+
+padding-top:6px;
+
+font-size:10pt;
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+/*********************************************************
+TEXTOS
+**********************************************************/
+
+h1{
+
+font-size:18pt;
+
+text-align:center;
+
+margin-bottom:18px;
 
 text-transform:uppercase;
 
@@ -100,21 +182,17 @@ text-transform:uppercase;
 
 h2{
 
-font-size:17px;
+font-size:15pt;
 
-font-weight:bold;
+margin-top:18px;
 
-text-align:center;
-
-margin-bottom:8px;
+margin-bottom:10px;
 
 }
 
 h3{
 
-font-size:15px;
-
-font-weight:bold;
+font-size:13pt;
 
 margin-top:15px;
 
@@ -122,33 +200,17 @@ margin-bottom:8px;
 
 }
 
-h4{
-
-font-size:14px;
-
-font-weight:bold;
-
-margin-top:12px;
-
-margin-bottom:6px;
-
-}
-
 p{
 
-font-size:13pt;
-
 text-align:justify;
-
-line-height:1.9;
 
 margin-bottom:12px;
 
 }
 
-/****************************************************
-TABLAS
-****************************************************/
+/*********************************************************
+CUADROS
+**********************************************************/
 
 table{
 
@@ -164,83 +226,53 @@ font-size:13pt;
 
 }
 
-table th{
+th{
+
+background:#ECECEC;
 
 border:1px solid #000;
 
-padding:7px;
-
-background:#ededed;
+padding:8px;
 
 }
 
-table td{
+td{
 
 border:1px solid #000;
 
-padding:7px;
+padding:8px;
 
 vertical-align:top;
 
 }
 
-/****************************************************
-ENCABEZADO
-****************************************************/
+.caption{
 
-.header{
-
-border-bottom:2px solid #800000;
-
-padding-bottom:6px;
-
-margin-bottom:20px;
-
-}
-
-.header h2{
-
-font-size:15px;
-
-margin-bottom:2px;
-
-}
-
-.header p{
+font-weight:bold;
 
 text-align:center;
 
-font-size:11px;
+margin-top:20px;
+
+margin-bottom:8px;
 
 }
 
-/****************************************************
-PIE
-****************************************************/
+.fuente{
 
-.footer{
+font-size:11pt;
 
-position:absolute;
+font-style:italic;
 
-bottom:10mm;
+margin-top:-8px;
 
-left:20mm;
-
-right:20mm;
-
-border-top:2px solid #800000;
-
-padding-top:5px;
-
-text-align:center;
-
-font-size:11px;
+margin-bottom:18px;
 
 }
 
-/****************************************************
+/*********************************************************
 PORTADA
-****************************************************/
+**********************************************************/
 
 .portada{
 
@@ -250,51 +282,29 @@ flex-direction:column;
 
 justify-content:space-between;
 
-height:250mm;
+height:248mm;
 
 }
 
-.logo{
+.portada h1{
+
+font-size:24pt;
+
+}
+
+.portada h2{
+
+font-size:18pt;
 
 text-align:center;
 
-margin-top:10mm;
-
-}
-
-.logo img{
-
-width:110px;
-
-}
-
-.titulo{
-
-margin-top:20mm;
-
-text-align:center;
-
-}
-
-.titulo h1{
-
-font-size:24px;
-
-margin-bottom:20px;
-
-}
-
-.titulo h2{
-
-font-size:18px;
-
-margin-bottom:8px;
+margin:6px 0;
 
 }
 
 .datos{
 
-margin-top:30mm;
+margin-top:25mm;
 
 }
 
@@ -304,57 +314,51 @@ width:35%;
 
 font-weight:bold;
 
-background:#f2f2f2;
+background:#F3F3F3;
 
 }
 
 .firma{
 
-margin-top:35mm;
-
 text-align:center;
 
-font-size:15px;
+margin-top:30mm;
 
 font-weight:bold;
 
 }
 
-/****************************************************
-BOTON IMPRIMIR
-****************************************************/
+/*********************************************************
+BOTÓN IMPRIMIR
+**********************************************************/
 
 #printButton{
 
 position:fixed;
 
-bottom:35px;
-
 right:35px;
+
+bottom:35px;
 
 width:70px;
 
 height:70px;
 
-border:none;
-
 border-radius:50%;
 
-background:#8b0000;
+border:none;
 
-color:white;
+background:#8B0000;
 
-font-size:30px;
+color:#fff;
+
+font-size:28px;
 
 cursor:pointer;
 
-box-shadow:
-
-0 4px 12px rgba(0,0,0,.35);
+box-shadow:0 5px 15px rgba(0,0,0,.30);
 
 z-index:99999;
-
-transition:.30s;
 
 }
 
@@ -364,9 +368,9 @@ transform:scale(1.08);
 
 }
 
-/****************************************************
-IMPRESION
-****************************************************/
+/*********************************************************
+IMPRESIÓN
+**********************************************************/
 
 @page{
 
@@ -406,6 +410,8 @@ display:none;
 
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
 </head>
 
 <body>
@@ -420,57 +426,33 @@ onclick="window.print();">
 
 </button>
 
-<!-- ================================================= -->
-
-<!--                    PORTADA                         -->
-
-<!-- ================================================= -->
-
 <div class="page">
 
 <div class="portada">
 
-<div class="logo">
-
-<!-- ESCUDO O LOGO -->
-
-</div>
-
-<div class="titulo">
+<div>
 
 <h1>
 
-INFORME PERICIAL CONTABLE
+INFORME PERICIAL CONTABLE DE PARTE
 
 </h1>
 
 <h2>
 
-RECONSTRUCCIÓN TÉCNICA
+RECONSTRUCCIÓN TÉCNICA Y LIQUIDACIÓN FINANCIERA
 
 </h2>
 
 <h2>
 
-Y LIQUIDACIÓN FINANCIERA
+DERIVADA DEL CONTRATO PRIVADO
 
 </h2>
 
 <h2>
 
-DERIVADA DEL CONTRATO
-
-</h2>
-
-<h2>
-
-PRIVADO DE
-
-</h2>
-
-<h2>
-
-RECONOCIMIENTO DE DEUDA
+DE RECONOCIMIENTO DE DEUDA
 
 </h2>
 
@@ -526,7 +508,7 @@ MATERIA
 
 <td>
 
-RECONSTRUCCIÓN FINANCIERA
+RECONSTRUCCIÓN FINANCIERA Y LIQUIDACIÓN DE INTERESES
 
 </td>
 
@@ -552,13 +534,13 @@ C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
 
 <td>
 
-REGISTRO
+MATRÍCULA
 
 </td>
 
 <td>
 
-MAT. N.º 55655
+N.º 55655
 
 </td>
 
@@ -592,84 +574,46 @@ JESÚS ÁNGEL CÁRDENAS SIMON
 
 <br>
 
+CONTADOR PÚBLICO COLEGIADO
+
+<br>
+
 PERITO CONTABLE DE PARTE
 
 </div>
 
 <div class="footer">
 
-<hr style="border:1px solid #990000;">
-
-<table style="border:none;font-size:10pt;">
-
-<tr style="border:none;">
-
-<td style="border:none;">
+<div>
 
 C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
 
-<br>
-
-CONTADOR PÚBLICO COLEGIADO
-
-<br>
-
-MAT. N.° 55655
-
-</td>
-
-<td style="border:none;text-align:center;">
-
-Página
-
-<span class="pageNumber"></span>
-
-</td>
-
-<td style="border:none;text-align:right;">
-
-TELÉFONO:
-
-987654321
-
-<br>
-
-EMAIL:
-
-xxxxx@gmail.com
-
-</td>
-
-</tr>
-
-</table>
-
 </div>
 
-C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+<div>
 
-•
-
-PERITO CONTABLE
-
-•
-
-2026
+INFORME PERICIAL CONTABLE
 
 </div>
 
 </div>
 
 </div>
-  <!-- ================================================= -->
 
-<!--                    ÍNDICE                          -->
-
-<!-- ================================================= -->
+</div>
+<!-- ===================================================== -->
+<!--                     ÍNDICE                            -->
+<!-- ===================================================== -->
 
 <div class="page">
 
 <div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
 
 <h2>
 
@@ -677,13 +621,22 @@ INFORME PERICIAL CONTABLE
 
 </h2>
 
-<p>
+<h3>
 
-C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON • PERITO CONTABLE
+CASO UMERES
 
-</p>
+</h3>
 
 </div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
 
 <h1>
 
@@ -691,41 +644,43 @@ C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON • PERITO CONTABLE
 
 </h1>
 
+
 <table>
 
 <tr>
 
 <th style="width:15%;">
 
-CAP.
+CAPÍTULO
 
 </th>
 
 <th>
 
-CONTENIDO
+DENOMINACIÓN
 
 </th>
 
 <th style="width:15%;">
 
-PÁG.
+PÁGINA
 
 </th>
 
 </tr>
 
+
 <tr>
 
 <td>
 
-I
+-
 
 </td>
 
 <td>
 
-ANTECEDENTES
+Presentación del Perito Contable
 
 </td>
 
@@ -737,6 +692,30 @@ ANTECEDENTES
 
 </tr>
 
+
+<tr>
+
+<td>
+
+I
+
+</td>
+
+<td>
+
+Antecedentes
+
+</td>
+
+<td>
+
+05
+
+</td>
+
+</tr>
+
+
 <tr>
 
 <td>
@@ -747,17 +726,18 @@ II
 
 <td>
 
-OBJETO, ALCANCE Y METODOLOGÍA
+Objeto, alcance y metodología del examen pericial
 
 </td>
 
 <td>
 
-08
+10
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -769,7 +749,7 @@ III
 
 <td>
 
-EXAMEN Y RECONSTRUCCIÓN FINANCIERA
+Examen técnico y reconstrucción financiera de la obligación
 
 </td>
 
@@ -781,6 +761,7 @@ EXAMEN Y RECONSTRUCCIÓN FINANCIERA
 
 </tr>
 
+
 <tr>
 
 <td>
@@ -791,17 +772,18 @@ IV
 
 <td>
 
-CONCLUSIONES
+Conclusiones del Informe Pericial
 
 </td>
 
 <td>
 
-38
+35
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -813,17 +795,33 @@ V
 
 <td>
 
-FECHA, FIRMA Y SELLO
+Fecha, firma y sello del Perito Contable
 
 </td>
 
 <td>
 
-41
+38
 
 </td>
 
 </tr>
+
+
+<tr>
+
+<td colspan="3">
+
+<strong>
+
+ANEXOS TÉCNICOS
+
+</strong>
+
+</td>
+
+</tr>
+
 
 <tr>
 
@@ -835,17 +833,18 @@ AT-01
 
 <td>
 
-CRONOGRAMA FINANCIERO
+Documentación y parámetros financieros considerados
 
 </td>
 
 <td>
 
-43
+40
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -857,17 +856,18 @@ AT-02
 
 <td>
 
-RECONSTRUCCIÓN DE LOS PRÉSTAMOS
+Cronograma financiero de la obligación
 
 </td>
 
 <td>
 
-47
+45
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -879,17 +879,18 @@ AT-03
 
 <td>
 
-APLICACIÓN DEL PAGO ACREDITADO
+Matriz de reconstrucción financiera
 
 </td>
 
 <td>
 
-49
+52
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -901,51 +902,7 @@ AT-04
 
 <td>
 
-SALDO INSOLUTO
-
-</td>
-
-<td>
-
-51
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-AT-05
-
-</td>
-
-<td>
-
-GRÁFICOS FINANCIEROS
-
-</td>
-
-<td>
-
-53
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-AT-06
-
-</td>
-
-<td>
-
-VALIDACIÓN MATEMÁTICA
+Aplicación del pago acreditado de S/ 5,400.00
 
 </td>
 
@@ -957,93 +914,337 @@ VALIDACIÓN MATEMÁTICA
 
 </tr>
 
+
+<tr>
+
+<td>
+
+AT-05
+
+</td>
+
+<td>
+
+Determinación del saldo insoluto
+
+</td>
+
+<td>
+
+62
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+AT-06
+
+</td>
+
+<td>
+
+Gráficos financieros y análisis visual
+
+</td>
+
+<td>
+
+66
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+AT-07
+
+</td>
+
+<td>
+
+Validación matemática de resultados
+
+</td>
+
+<td>
+
+72
+
+</td>
+
+</tr>
+
+
 </table>
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable conforme a la documentación examinada.
+
+</div>
+
 
 <div class="footer">
 
-INFORME PERICIAL CONTABLE
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+ÍNDICE
 
 </div>
 
 </div>
 
-<!-- ================================================= -->
 
-<!--                 INTRODUCCIÓN                       -->
+</div>
 
-<!-- ================================================= -->
+
+
+<!-- ===================================================== -->
+<!--              PRESENTACIÓN DEL PERITO                  -->
+<!-- ===================================================== -->
+
 
 <div class="page">
 
+
 <div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
 
 <h2>
 
-INTRODUCCIÓN
+PRESENTACIÓN DEL PERITO
 
 </h2>
 
-<p>
+<h3>
 
-INFORME PERICIAL CONTABLE
+INFORME PERICIAL CONTABLE DE PARTE
 
-</p>
+</h3>
 
 </div>
 
-<p>
+<div class="header-right">
 
-El presente Informe Pericial Contable ha sido elaborado con la finalidad
-de reconstruir técnica y financieramente la obligación reconocida mediante
-Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago de fecha
-01 de septiembre de 2016.
+2026
 
-</p>
+</div>
 
-<p>
+</div>
 
-La labor pericial comprende el examen integral de la documentación
-proporcionada, la reconstrucción cronológica de las operaciones económicas,
-la determinación de los parámetros financieros pactados, la evaluación de
-los pagos acreditados y la determinación del saldo económico resultante.
 
-</p>
 
 <p>
 
-El análisis desarrollado se fundamenta en procedimientos propios de la
-contabilidad, de la matemática financiera y de la técnica pericial,
-preservando en todo momento los principios de objetividad, independencia,
-trazabilidad y verificabilidad de los resultados obtenidos.
+<strong>JESÚS ÁNGEL CÁRDENAS SIMON</strong>, identificado con Documento
+Nacional de Identidad N.º <strong>45060367</strong>, Contador Público
+Colegiado con Matrícula N.º <strong>55655</strong> del Colegio de
+Contadores Públicos de Lima, Perito Contable de Parte, habiendo
+efectuado el examen técnico de la documentación contractual, bancaria y
+financiera correspondiente a la obligación materia del presente informe,
+cumplo con emitir el presente
+<strong>INFORME PERICIAL CONTABLE DE PARTE</strong>, cuyo contenido se
+desarrolla en los siguientes capítulos:
 
 </p>
+
+
+<table>
+
+<tr>
+
+<th style="width:20%;">
+
+CAPÍTULO
+
+</th>
+
+<th>
+
+CONTENIDO
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+I
+
+</td>
+
+<td>
+
+Antecedentes relacionados con el origen y reconocimiento de la obligación.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+II
+
+</td>
+
+<td>
+
+Objeto, alcance y metodología aplicada en el examen pericial.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+III
+
+</td>
+
+<td>
+
+Examen técnico, análisis documental y reconstrucción financiera de la deuda.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+IV
+
+</td>
+
+<td>
+
+Conclusiones obtenidas como resultado del análisis pericial.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+V
+
+</td>
+
+<td>
+
+Fecha, firma y sello del Perito Contable de Parte.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+ANEXOS
+
+</td>
+
+<td>
+
+Cronogramas, matrices financieras, cuadros técnicos y gráficos de análisis.
+
+</td>
+
+</tr>
+
+
+</table>
+
 
 <p>
 
-Como sustento del presente dictamen se incorporan anexos técnicos que
-contienen cronogramas financieros, matrices de análisis, gráficos
-explicativos y cuadros de validación matemática, los cuales permiten
-verificar íntegramente las conclusiones emitidas.
+El presente informe ha sido elaborado aplicando procedimientos técnicos
+de revisión documental, análisis contable y reconstrucción financiera,
+considerando exclusivamente la información proporcionada y los
+documentos examinados, manteniendo criterios de objetividad,
+independencia profesional, trazabilidad y verificabilidad de los
+resultados obtenidos.
 
 </p>
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+
 
 <div class="footer">
 
-INFORME PERICIAL CONTABLE
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+PRESENTACIÓN DEL PERITO
 
 </div>
 
 </div>
 
-<!-- ================================================= -->
 
-<!--                 CAPÍTULO I                         -->
-
-<!-- ================================================= -->
+</div>
+<!-- ===================================================== -->
+<!--                 CAPÍTULO I                            -->
+<!-- ===================================================== -->
 
 <div class="page">
 
 <div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
 
 <h2>
 
@@ -1051,13 +1252,22 @@ CAPÍTULO I
 
 </h2>
 
-<p>
+<h3>
 
 ANTECEDENTES
 
-</p>
+</h3>
 
 </div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
 
 <h1>
 
@@ -1065,47 +1275,47 @@ ANTECEDENTES
 
 </h1>
 
-<h3>
-
-1.1 DATOS GENERALES
-
-</h3>
 
 <p>
 
-El presente Informe Pericial Contable tiene por objeto efectuar la
-reconstrucción financiera de las obligaciones económicas asumidas entre
-la señora HAIDE UMERES SALDIVAR, en calidad de acreedora, y la señora
-PERPETUA UMERES GAMARRA, en calidad de deudora, conforme al Contrato
-Privado de Reconocimiento de Deuda y Compromiso de Pago suscrito con
-fecha 01 de septiembre de 2016.
+El presente Informe Pericial Contable tiene como finalidad efectuar el
+análisis técnico y la reconstrucción financiera de la obligación
+contenida en el Contrato Privado de Reconocimiento de Deuda y
+Compromiso de Pago de fecha 01 de septiembre de 2016, celebrado entre la
+señora <strong>Haide Umeres Saldivar</strong>, en calidad de acreedora,
+y la señora <strong>Perpetua Umeres Gamarra</strong>, en calidad de
+deudora.
 
 </p>
 
-<h3>
-
-1.2 ORIGEN DE LA OBLIGACIÓN
-
-</h3>
 
 <p>
 
-Del examen de la documentación se verifica que la obligación consolidada
-tiene su origen en tres operaciones de préstamo celebradas durante el
-año 2015, las cuales fueron posteriormente integradas mediante un solo
-reconocimiento de deuda ascendente a S/ 49,600.00.
+El examen comprende la revisión integral de la documentación
+contractual, el análisis cronológico de las operaciones económicas que
+originaron la obligación, la reconstrucción matemática de la deuda y la
+determinación del saldo económico pendiente conforme a los parámetros
+expresamente pactados por las partes.
 
 </p>
+
+
+<!-- =========================================== -->
+
+<div class="caption">
+
+CUADRO N.° 01
+
+<br>
+
+IDENTIFICACIÓN DE LAS PARTES
+
+</div>
+
 
 <table>
 
 <tr>
-
-<th>
-
-FECHA
-
-</th>
 
 <th>
 
@@ -1115,11 +1325,144 @@ CONCEPTO
 
 <th>
 
-CAPITAL
+DESCRIPCIÓN
 
 </th>
 
 </tr>
+
+
+<tr>
+
+<td style="width:35%;">
+
+Acreedora
+
+</td>
+
+<td>
+
+Haide Umeres Saldivar
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Deudora
+
+</td>
+
+<td>
+
+Perpetua Umeres Gamarra
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Documento principal
+
+</td>
+
+<td>
+
+Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Fecha
+
+</td>
+
+<td>
+
+01 de septiembre de 2016.
+
+</td>
+
+</tr>
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Contrato Privado de Reconocimiento de Deuda.
+
+</div>
+
+
+
+<h2>
+
+1.1 ORIGEN DE LA OBLIGACIÓN
+
+</h2>
+
+
+<p>
+
+De la revisión de los documentos examinados se verifica que la deuda
+materia del presente informe no se originó en una sola operación
+económica, sino en diversas entregas de dinero efectuadas durante el año
+2015, las cuales fueron posteriormente consolidadas mediante un
+reconocimiento expreso de deuda suscrito por las partes.
+
+</p>
+
+
+<div class="caption">
+
+CUADRO N.° 02
+
+<br>
+
+PRÉSTAMOS QUE DIERON ORIGEN A LA OBLIGACIÓN
+
+</div>
+
+
+<table>
+
+<tr>
+
+<th style="width:18%;">
+
+FECHA
+
+</th>
+
+<th>
+
+OPERACIÓN
+
+</th>
+
+<th style="width:22%;">
+
+IMPORTE
+
+</th>
+
+</tr>
+
 
 <tr>
 
@@ -1131,17 +1474,18 @@ CAPITAL
 
 <td>
 
-Primer préstamo
+Primer préstamo.
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
 S/ 5,000.00
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -1153,17 +1497,18 @@ S/ 5,000.00
 
 <td>
 
-Segundo préstamo
+Segundo préstamo.
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
 S/ 5,000.00
 
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -1175,11 +1520,11 @@ S/ 5,000.00
 
 <td>
 
-Tercer préstamo
+Tercer préstamo.
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
 S/ 25,000.00
 
@@ -1187,21 +1532,92 @@ S/ 25,000.00
 
 </tr>
 
+
+<tr>
+
+<th colspan="2">
+
+TOTAL CAPITAL ENTREGADO
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 35,000.00
+
+</th>
+
+</tr>
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Contratos Privados de Préstamo incorporados al expediente.
+
+</div>
+
+
+
+<h2>
+
+1.2 RECONOCIMIENTO DE DEUDA
+
+</h2>
+
+
+<p>
+
+Como consecuencia de las obligaciones previamente asumidas, las partes
+suscribieron un Contrato Privado de Reconocimiento de Deuda y
+Compromiso de Pago mediante el cual la deudora reconoció adeudar la suma
+de <strong>S/ 49,600.00</strong>, estableciéndose además el mecanismo de
+cancelación de la obligación mediante treinta y seis (36) cuotas
+mensuales.
+
+</p>
+
+
+<div class="caption">
+
+CUADRO N.° 03
+
+<br>
+
+PARÁMETROS CONTRACTUALES
+
+</div>
+
+
+<table>
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th style="width:28%;">
+
+VALOR
+
+</th>
+
+</tr>
+
+
 <tr>
 
 <td>
 
-01/09/2016
+Capital reconocido
 
 </td>
 
-<td>
-
-Reconocimiento de deuda
-
-</td>
-
-<td>
+<td style="text-align:right;">
 
 S/ 49,600.00
 
@@ -1209,13 +1625,94 @@ S/ 49,600.00
 
 </tr>
 
+
+<tr>
+
+<td>
+
+Plazo
+
+</td>
+
+<td>
+
+36 meses
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Tasa convencional
+
+</td>
+
+<td>
+
+2.50 % mensual
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Cuota pactada
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 2,012.05
+
+</td>
+
+</tr>
+
 </table>
 
-<h3>
+
+<div class="fuente">
+
+Fuente: Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago.
+
+</div>
+
+
+
+<h2>
 
 1.3 DOCUMENTACIÓN EXAMINADA
 
-</h3>
+</h2>
+
+
+<p>
+
+Para la elaboración del presente Informe Pericial Contable se efectuó el
+análisis técnico de la documentación vinculada con el origen, evolución
+y estado actual de la obligación económica.
+
+</p>
+
+
+<div class="caption">
+
+CUADRO N.° 04
+
+<br>
+
+DOCUMENTOS EXAMINADOS
+
+</div>
+
 
 <table>
 
@@ -1235,6 +1732,7 @@ DOCUMENTO
 
 </tr>
 
+
 <tr>
 
 <td>
@@ -1250,6 +1748,7 @@ Contrato Privado de Préstamo de fecha 25/04/2015.
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -1267,6 +1766,7 @@ Contrato Privado de Préstamo de fecha 03/06/2015.
 
 </tr>
 
+
 <tr>
 
 <td>
@@ -1282,6 +1782,7 @@ Contrato Privado de Préstamo de fecha 01/07/2015.
 </td>
 
 </tr>
+
 
 <tr>
 
@@ -1299,6 +1800,7 @@ Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago.
 
 </tr>
 
+
 <tr>
 
 <td>
@@ -1315,6 +1817,7 @@ Solicitud de Conciliación Extrajudicial.
 
 </tr>
 
+
 <tr>
 
 <td>
@@ -1325,7 +1828,7 @@ Solicitud de Conciliación Extrajudicial.
 
 <td>
 
-Comprobante del pago acreditado por S/ 5,400.00.
+Constancia del pago acreditado por S/ 5,400.00.
 
 </td>
 
@@ -1333,22 +1836,45 @@ Comprobante del pago acreditado por S/ 5,400.00.
 
 </table>
 
+
+<div class="fuente">
+
+Fuente: Documentación proporcionada para el examen pericial.
+
+</div>
+
+
+
 <div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
 
 CAPÍTULO I • ANTECEDENTES
 
 </div>
 
 </div>
-<!-- ================================================= -->
 
-<!--                 CAPÍTULO II                        -->
-
-<!-- ================================================= -->
+</div>
+<!-- ===================================================== -->
+<!--                 CAPÍTULO II                           -->
+<!-- ===================================================== -->
 
 <div class="page">
 
 <div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
 
 <h2>
 
@@ -1356,69 +1882,56 @@ CAPÍTULO II
 
 </h2>
 
-<p>
+<h3>
 
-OBJETO, ALCANCE Y METODOLOGÍA
+OBJETO, ALCANCE Y METODOLOGÍA DEL EXAMEN PERICIAL
 
-</p>
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
 
 </div>
 
 <h1>
 
-OBJETO, ALCANCE Y METODOLOGÍA
+OBJETO, ALCANCE Y METODOLOGÍA DEL EXAMEN PERICIAL
 
 </h1>
-
-<h3>
-
-2.1 OBJETO DE LA PERICIA
-
-</h3>
 
 <p>
 
 El presente Informe Pericial Contable tiene por objeto efectuar la
-reconstrucción técnica, contable y financiera de la obligación
-consolidada mediante Contrato Privado de Reconocimiento de Deuda y
-Compromiso de Pago de fecha 01 de septiembre de 2016, verificando la
-consistencia entre la documentación examinada, los parámetros
-contractuales pactados y el comportamiento financiero de la obligación.
+reconstrucción técnica, financiera y cronológica de la obligación
+contenida en el Contrato Privado de Reconocimiento de Deuda y Compromiso
+de Pago, verificando el origen de la deuda, los parámetros financieros
+pactados, los pagos acreditados y la determinación del saldo económico
+pendiente.
 
 </p>
 
-<p>
+<div class="caption">
 
-Asimismo, la presente pericia tiene como finalidad determinar la
-incidencia del pago acreditado documentalmente y establecer el saldo
-económico resultante conforme a las condiciones expresamente convenidas
-por las partes.
+CUADRO N.° 05
 
-</p>
+<br>
 
-<h3>
+OBJETO DEL EXAMEN PERICIAL
 
-2.2 ALCANCE
-
-</h3>
-
-<p>
-
-El examen comprende exclusivamente el análisis técnico de la
-documentación proporcionada, la reconstrucción cronológica de la
-obligación y la aplicación de procedimientos propios de la matemática
-financiera, sin emitir pronunciamiento respecto de aspectos jurídicos
-que corresponden exclusivamente al órgano jurisdiccional.
-
-</p>
+</div>
 
 <table>
 
 <tr>
 
-<th>
+<th style="width:30%;">
 
-ÁREA DE EXAMEN
+ASPECTO
 
 </th>
 
@@ -1434,13 +1947,13 @@ DESCRIPCIÓN
 
 <td>
 
-Documentación Contractual
+Reconstrucción financiera
 
 </td>
 
 <td>
 
-Revisión de los contratos de préstamo y del reconocimiento de deuda.
+Determinación cronológica del comportamiento económico de la obligación.
 
 </td>
 
@@ -1450,13 +1963,129 @@ Revisión de los contratos de préstamo y del reconocimiento de deuda.
 
 <td>
 
-Reconstrucción Financiera
+Verificación documental
 
 </td>
 
 <td>
 
-Determinación matemática del comportamiento económico de la obligación.
+Examen de contratos, documentos y constancias de pago.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Liquidación financiera
+
+</td>
+
+<td>
+
+Determinación del capital, intereses y saldo económico.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Análisis pericial
+
+</td>
+
+<td>
+
+Evaluación técnica de los resultados obtenidos.
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+<h2>
+
+2.1 ALCANCE DEL EXAMEN
+
+</h2>
+
+<p>
+
+El examen comprende únicamente el análisis técnico de la documentación
+proporcionada, la reconstrucción matemática de la obligación y la
+evaluación financiera de los pagos acreditados, sin emitir
+pronunciamiento sobre aspectos jurídicos cuya valoración corresponde al
+órgano jurisdiccional.
+
+</p>
+
+<div class="caption">
+
+CUADRO N.° 06
+
+<br>
+
+ALCANCE DEL INFORME PERICIAL
+
+</div>
+
+<table>
+
+<tr>
+
+<th>
+
+ÁREA
+
+</th>
+
+<th>
+
+ALCANCE
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+Contratos
+
+</td>
+
+<td>
+
+Revisión integral de los contratos de préstamo y reconocimiento de deuda.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Parámetros financieros
+
+</td>
+
+<td>
+
+Capital, tasa, plazo y cuota pactada.
 
 </td>
 
@@ -1472,7 +2101,7 @@ Pagos
 
 <td>
 
-Verificación documental e incidencia financiera del pago acreditado.
+Verificación de los pagos acreditados documentalmente.
 
 </td>
 
@@ -1482,13 +2111,13 @@ Verificación documental e incidencia financiera del pago acreditado.
 
 <td>
 
-Saldo Insoluto
+Reconstrucción matemática
 
 </td>
 
 <td>
 
-Determinación del saldo pendiente conforme a los parámetros pactados.
+Determinación del comportamiento financiero de la obligación.
 
 </td>
 
@@ -1496,26 +2125,41 @@ Determinación del saldo pendiente conforme a los parámetros pactados.
 
 </table>
 
-<h3>
+<div class="fuente">
 
-2.3 METODOLOGÍA
+Fuente: Elaboración propia.
 
-</h3>
+</div>
+
+<h2>
+
+2.2 METODOLOGÍA APLICADA
+
+</h2>
 
 <p>
 
-La metodología utilizada comprende procedimientos de revisión
-documental, análisis contable, reconstrucción financiera y validación
-matemática, aplicando únicamente la información contenida en la
-documentación examinada.
+La metodología empleada en el presente examen se fundamenta en técnicas
+de auditoría documental, análisis contable y matemática financiera,
+permitiendo reconstruir objetivamente la evolución de la obligación.
 
 </p>
+
+<div class="caption">
+
+CUADRO N.° 07
+
+<br>
+
+METODOLOGÍA DEL EXAMEN PERICIAL
+
+</div>
 
 <table>
 
 <tr>
 
-<th style="width:15%;">
+<th style="width:12%;">
 
 ETAPA
 
@@ -1533,13 +2177,13 @@ PROCEDIMIENTO
 
 <td>
 
-01
+I
 
 </td>
 
 <td>
 
-Examen documental.
+Revisión de la documentación contractual.
 
 </td>
 
@@ -1549,7 +2193,7 @@ Examen documental.
 
 <td>
 
-02
+II
 
 </td>
 
@@ -1565,13 +2209,13 @@ Identificación de parámetros financieros.
 
 <td>
 
-03
+III
 
 </td>
 
 <td>
 
-Reconstrucción cronológica de la obligación.
+Reconstrucción cronológica de la deuda.
 
 </td>
 
@@ -1581,7 +2225,7 @@ Reconstrucción cronológica de la obligación.
 
 <td>
 
-04
+IV
 
 </td>
 
@@ -1597,7 +2241,7 @@ Elaboración del cronograma financiero.
 
 <td>
 
-05
+V
 
 </td>
 
@@ -1613,7 +2257,7 @@ Aplicación del pago acreditado.
 
 <td>
 
-06
+VI
 
 </td>
 
@@ -1629,13 +2273,13 @@ Determinación del saldo insoluto.
 
 <td>
 
-07
+VII
 
 </td>
 
 <td>
 
-Elaboración de anexos técnicos.
+Elaboración de cuadros, matrices y gráficos.
 
 </td>
 
@@ -1643,11 +2287,27 @@ Elaboración de anexos técnicos.
 
 </table>
 
-<h3>
+<div class="fuente">
 
-2.4 PARÁMETROS CONTRACTUALES
+Fuente: Elaboración propia del Perito Contable.
 
-</h3>
+</div>
+
+<h2>
+
+2.3 PARÁMETROS FINANCIEROS DEL CONTRATO
+
+</h2>
+
+<div class="caption">
+
+CUADRO N.° 08
+
+<br>
+
+PARÁMETROS CONTRACTUALES
+
+</div>
 
 <table>
 
@@ -1655,11 +2315,11 @@ Elaboración de anexos técnicos.
 
 <th>
 
-CONCEPTO
+VARIABLE
 
 </th>
 
-<th>
+<th style="width:30%;">
 
 VALOR
 
@@ -1675,7 +2335,7 @@ Capital reconocido
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
 S/ 49,600.00
 
@@ -1687,13 +2347,29 @@ S/ 49,600.00
 
 <td>
 
-Fecha del reconocimiento
+Pago acreditado
 
 </td>
 
+<td style="text-align:right;">
+
+S/ 5,400.00
+
+</td>
+
+</tr>
+
+<tr>
+
 <td>
 
-01/09/2016
+Saldo de capital
+
+</td>
+
+<td style="text-align:right;">
+
+<strong>S/ 44,200.00</strong>
 
 </td>
 
@@ -1735,17 +2411,171 @@ Plazo
 
 <td>
 
-Cuota pactada
+Sistema pactado
 
 </td>
 
 <td>
 
-S/ 2,012.05
+Cuota fija mensual
 
 </td>
 
 </tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago.
+
+</div>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+CAPÍTULO II • METODOLOGÍA
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!--                 CAPÍTULO III                          -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
+<h2>
+
+CAPÍTULO III
+
+</h2>
+
+<h3>
+
+EXAMEN TÉCNICO Y RECONSTRUCCIÓN FINANCIERA
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+
+<h1>
+
+EXAMEN TÉCNICO Y RECONSTRUCCIÓN FINANCIERA
+
+</h1>
+
+
+<p>
+
+En el presente capítulo se desarrolla el examen técnico de la obligación
+económica materia de pericia, considerando la documentación contractual
+examinada, los parámetros financieros pactados y los pagos acreditados
+documentalmente.
+
+</p>
+
+
+<p>
+
+La reconstrucción financiera tiene como finalidad determinar la evolución
+de la obligación desde su reconocimiento contractual hasta la
+determinación del saldo pendiente, aplicando procedimientos propios de
+la matemática financiera y manteniendo correspondencia con la evidencia
+documental revisada.
+
+</p>
+
+
+<h2>
+
+3.1 DETERMINACIÓN DE LA OBLIGACIÓN INICIAL
+
+</h2>
+
+
+<p>
+
+Con fecha 01 de septiembre de 2016 las partes suscribieron el Contrato
+Privado de Reconocimiento de Deuda y Compromiso de Pago, mediante el
+cual la deudora reconoció mantener una obligación económica ascendente a
+la suma de <strong>S/ 49,600.00</strong>.
+
+</p>
+
+
+<div class="caption">
+
+CUADRO N.° 09
+
+<br>
+
+DETERMINACIÓN DE LA OBLIGACIÓN RECONOCIDA
+
+</div>
+
+
+<table>
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th style="width:30%;">
+
+IMPORTE
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Capital reconocido mediante contrato
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
 
 <tr>
 
@@ -1755,95 +2585,87 @@ Pago acreditado
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
-S/ 5,400.00
+(S/ 5,400.00)
 
 </td>
 
 </tr>
 
+
+<tr>
+
+<th>
+
+SALDO DE CAPITAL INSOLUTO
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 44,200.00
+
+</th>
+
+</tr>
+
+
 </table>
 
-<p>
 
-Los parámetros precedentes constituyen la base técnica para la
-reconstrucción financiera desarrollada en el Capítulo III y en los
-Anexos Técnicos del presente Informe Pericial.
+<div class="fuente">
 
-</p>
-
-<div class="footer">
-
-CAPÍTULO II • OBJETO, ALCANCE Y METODOLOGÍA
+Fuente: Contrato Privado de Reconocimiento de Deuda y documentación de pago examinada.
 
 </div>
 
-</div>
 
-<!-- ================================================= -->
-
-<!--                 CAPÍTULO III                       -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
 
 <h2>
 
-CAPÍTULO III
+3.2 ANÁLISIS DEL PAGO ACREDITADO
 
 </h2>
 
+
 <p>
 
-EXAMEN Y RECONSTRUCCIÓN FINANCIERA
+Del examen de la documentación proporcionada se verificó la existencia
+de un único pago acreditado por la suma de
+<strong>S/ 5,400.00</strong>, no habiéndose identificado documentos que
+sustenten otros pagos parciales o totales efectuados respecto de la
+obligación reconocida.
 
 </p>
+
+
+<div class="caption">
+
+CUADRO N.° 10
+
+<br>
+
+PAGOS ACREDITADOS
 
 </div>
 
-<h1>
-
-EXAMEN Y RECONSTRUCCIÓN FINANCIERA
-
-</h1>
-
-<h3>
-
-3.1 OBJETIVO DEL EXAMEN FINANCIERO
-
-</h3>
-
-<p>
-
-El examen financiero tiene por finalidad reconstruir el comportamiento
-económico de la obligación reconocida mediante Contrato Privado de
-Reconocimiento de Deuda y Compromiso de Pago, aplicando estrictamente
-los parámetros financieros establecidos por las partes.
-
-</p>
-
-<p>
-
-La reconstrucción desarrollada no modifica el contenido contractual,
-sino que reproduce matemáticamente sus efectos económicos, permitiendo
-determinar la evolución del capital, los intereses generados, la
-amortización y el saldo pendiente de la obligación.
-
-</p>
-
-<h3>
-
-3.2 CAPITAL OBJETO DE RECONSTRUCCIÓN
-
-</h3>
 
 <table>
 
 <tr>
+
+<th>
+
+N.º
+
+</th>
+
+<th>
+
+FECHA
+
+</th>
 
 <th>
 
@@ -1859,37 +2681,1610 @@ IMPORTE
 
 </tr>
 
+
 <tr>
 
 <td>
 
-Capital reconocido contractualmente
+01
 
 </td>
 
 <td>
 
-<strong>S/ 49,600.00</strong>
+Según documentación examinada
+
+</td>
+
+<td>
+
+Pago parcial aplicado a la obligación
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,400.00
 
 </td>
 
 </tr>
 
+
+<tr>
+
+<th colspan="3">
+
+TOTAL PAGOS ACREDITADOS
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 5,400.00
+
+</th>
+
+</tr>
+
+
 </table>
+
+
+<div class="fuente">
+
+Fuente: Documentación sustentatoria proporcionada para el examen pericial.
+
+</div>
+
+
+
+<h2>
+
+3.3 RECONSTRUCCIÓN FINANCIERA
+
+</h2>
+
 
 <p>
 
-El importe precedente constituye el capital financiero inicial de la
-obligación y representa el punto de partida de todos los cálculos
-contenidos en el presente informe.
+La reconstrucción financiera será desarrollada considerando los
+siguientes elementos:
 
 </p>
 
+
+<table>
+
+<tr>
+
+<th style="width:25%;">
+
+ELEMENTO
+
+</th>
+
+<th>
+
+APLICACIÓN PERICIAL
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Capital inicial
+
+</td>
+
+<td>
+
+Monto reconocido contractualmente: S/ 49,600.00.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Tasa financiera
+
+</td>
+
+<td>
+
+2.50 % mensual conforme al acuerdo contractual.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Plazo
+
+</td>
+
+<td>
+
+36 períodos mensuales.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Pagos
+
+</td>
+
+<td>
+
+Se considera únicamente el pago acreditado de S/ 5,400.00.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Resultado
+
+</td>
+
+<td>
+
+Determinación del saldo económico pendiente.
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+
+
+<h2>
+
+3.4 FUNDAMENTO MATEMÁTICO APLICADO
+
+</h2>
+
+
+<p>
+
+Para la determinación financiera de la obligación se emplean fórmulas de
+matemática financiera aplicables al cálculo de intereses y amortización,
+considerando los períodos establecidos en el contrato.
+
+</p>
+
+
+<div class="caption">
+
+CUADRO N.° 11
+
+<br>
+
+FÓRMULAS DE CÁLCULO FINANCIERO
+
+</div>
+
+
+<table>
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th>
+
+FÓRMULA
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Interés del período
+
+</td>
+
+<td>
+
+Interés = Saldo inicial × tasa mensual
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Amortización
+
+</td>
+
+<td>
+
+Amortización = Cuota - Interés
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Saldo final
+
+</td>
+
+<td>
+
+Saldo inicial - Amortización
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Saldo pendiente
+
+</td>
+
+<td>
+
+Capital pendiente + intereses determinados
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia aplicando matemática financiera.
+
+</div>
+
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+CAPÍTULO III • RECONSTRUCCIÓN FINANCIERA
+
+</div>
+
+</div>
+
+
+</div>
+<h2>
+
+3.5 ANÁLISIS DEL RECONOCIMIENTO DE DEUDA
+
+</h2>
+
+<p>
+
+Del examen del Contrato Privado de Reconocimiento de Deuda y Compromiso
+de Pago se verifica que las partes consolidaron las obligaciones
+preexistentes en una sola deuda ascendente a la suma de
+<strong>S/ 49,600.00</strong>, estableciendo un cronograma de pago en
+treinta y seis (36) cuotas mensuales, pactándose además una tasa de
+interés convencional del dos punto cincuenta por ciento (2.50%)
+mensual.
+
+</p>
+
+<p>
+
+La reconstrucción financiera desarrollada por el suscrito Perito
+Contable se efectuó respetando estrictamente las condiciones
+contractuales pactadas, sin modificar las variables económicas
+contenidas en el documento objeto de examen.
+
+</p>
+
+<p>
+
+El desarrollo íntegro del cronograma financiero utilizado para la
+reconstrucción de la obligación obra en el
+<strong>Anexo Técnico N.º 02</strong>, el cual forma parte integrante
+del presente Informe Pericial.
+
+</p>
+
+
+
+<h2>
+
+3.6 ANÁLISIS DE LOS PAGOS ACREDITADOS
+
+</h2>
+
+<p>
+
+Como resultado de la revisión documental se verificó únicamente la
+existencia de un pago acreditado por la suma de
+<strong>S/ 5,400.00</strong>, no habiéndose identificado documentos que
+sustenten otros pagos parciales o cancelaciones adicionales respecto de
+la obligación materia del presente examen.
+
+</p>
+
+<p>
+
+En consecuencia, la reconstrucción financiera considera exclusivamente
+el referido pago, preservando la correspondencia entre la evidencia
+documental examinada y los cálculos efectuados.
+
+</p>
+
+<p>
+
+El detalle de la aplicación financiera del pago acreditado puede
+apreciarse en el
+<strong>Anexo Técnico N.º 04</strong>.
+
+</p>
+
+
+
+<h2>
+
+3.7 DETERMINACIÓN DEL SALDO INSOLUTO
+
+</h2>
+
+<p>
+
+Conforme a la documentación examinada y al procedimiento de
+reconstrucción financiera efectuado, el capital reconocido ascendió a
+<strong>S/ 49,600.00</strong>, habiéndose acreditado un único pago por
+la suma de <strong>S/ 5,400.00</strong>, determinándose un saldo de
+capital pendiente de <strong>S/ 44,200.00</strong>, sin perjuicio de la
+liquidación de los intereses convencionales correspondientes.
+
+</p>
+
+<p>
+
+La determinación matemática del saldo económico, incluyendo la
+liquidación de intereses y la reconstrucción cronológica de la deuda,
+se desarrolla en el
+<strong>Anexo Técnico N.º 05</strong>.
+
+</p>
+
+
+
+<h2>
+
+3.8 ANÁLISIS PERICIAL
+
+</h2>
+
+<p>
+
+La revisión integral de la documentación contractual permite concluir
+que existe coherencia entre el reconocimiento de deuda efectuado por las
+partes y los parámetros financieros consignados en el contrato.
+
+</p>
+
+<p>
+
+Asimismo, la documentación examinada únicamente acredita la realización
+de un pago parcial por la suma de S/ 5,400.00, circunstancia que ha sido
+considerada para la reconstrucción financiera desarrollada por el
+suscrito Perito Contable.
+
+</p>
+
+<p>
+
+Los cuadros técnicos, cronogramas financieros, matrices de
+reconstrucción, liquidaciones y representaciones gráficas utilizadas
+como sustento del presente dictamen obran en los
+<strong>Anexos Técnicos N.os 01 al 09</strong>, formando parte
+integrante del presente Informe Pericial.
+
+</p>
+
+
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+CAPÍTULO III • EXAMEN TÉCNICO
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!--                 CAPÍTULO IV                           -->
+<!--                 CONCLUSIONES                           -->
+<!-- ===================================================== -->
+
+
+<div class="page">
+
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+
+<div class="header-center">
+
+<h2>
+
+CAPÍTULO IV
+
+</h2>
+
 <h3>
 
-3.3 PARÁMETROS FINANCIEROS
+CONCLUSIONES DEL INFORME PERICIAL
 
 </h3>
+
+</div>
+
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+
+
+<h1>
+
+CONCLUSIONES
+
+</h1>
+
+
+
+<p>
+
+Como resultado del examen técnico, documental y financiero efectuado
+sobre la obligación materia del presente Informe Pericial Contable, el
+suscrito Perito Contable formula las siguientes conclusiones, sustentadas
+en la documentación examinada y en los procedimientos técnicos
+desarrollados.
+
+</p>
+
+
+
+<h2>
+
+PRIMERA CONCLUSIÓN
+
+</h2>
+
+
+<p>
+
+Se determinó que la obligación materia de análisis tiene como origen
+diversas operaciones económicas realizadas durante el año 2015, las
+cuales posteriormente fueron consolidadas mediante el Contrato Privado
+de Reconocimiento de Deuda y Compromiso de Pago de fecha 01 de septiembre
+de 2016.
+
+</p>
+
+
+<p>
+
+El detalle documental de las operaciones que originaron la obligación se
+encuentra desarrollado en el
+<strong>Anexo Técnico N.º 01</strong>, correspondiente a la
+documentación examinada.
+
+</p>
+
+
+
+<h2>
+
+SEGUNDA CONCLUSIÓN
+
+</h2>
+
+
+<p>
+
+Se verificó que mediante el Contrato Privado de Reconocimiento de Deuda
+y Compromiso de Pago, la parte deudora reconoció una obligación económica
+ascendente a la suma de:
+
+</p>
+
+
+<p style="text-align:center;font-size:15pt;">
+
+<strong>
+
+S/ 49,600.00
+
+</strong>
+
+</p>
+
+
+<p>
+
+estableciéndose como condiciones financieras un plazo de treinta y seis
+(36) meses y una tasa convencional del 2.50 % mensual.
+
+</p>
+
+
+<p>
+
+La reconstrucción cronológica de dicha obligación se encuentra
+desarrollada en el
+<strong>Anexo Técnico N.º 02</strong>.
+
+</p>
+
+
+
+<h2>
+
+TERCERA CONCLUSIÓN
+
+</h2>
+
+
+<p>
+
+Del examen de la documentación proporcionada se verificó únicamente la
+existencia de un pago acreditado por la suma de:
+
+</p>
+
+
+<p style="text-align:center;font-size:15pt;">
+
+<strong>
+
+S/ 5,400.00
+
+</strong>
+
+</p>
+
+
+<p>
+
+No habiéndose identificado documentación adicional que sustente otros
+pagos parciales o cancelaciones respecto de la obligación examinada.
+
+</p>
+
+
+<p>
+
+La incidencia financiera del pago acreditado se encuentra desarrollada
+en el
+<strong>Anexo Técnico N.º 04</strong>.
+
+</p>
+
+
+
+<h2>
+
+CUARTA CONCLUSIÓN
+
+</h2>
+
+
+<p>
+
+Considerando el capital reconocido contractualmente y el pago acreditado,
+se determinó que el saldo de capital pendiente asciende a:
+
+</p>
+
+
+<p style="text-align:center;font-size:16pt;">
+
+<strong>
+
+S/ 44,200.00
+
+</strong>
+
+</p>
+
+
+<p>
+
+correspondiendo la liquidación integral de intereses y demás componentes
+financieros al desarrollo técnico contenido en el
+<strong>Anexo Técnico N.º 05</strong>.
+
+</p>
+
+
+
+<h2>
+
+QUINTA CONCLUSIÓN
+
+</h2>
+
+
+<p>
+
+La reconstrucción financiera efectuada por el suscrito Perito Contable
+ha sido desarrollada aplicando procedimientos de análisis documental,
+contabilidad financiera y matemática financiera, manteniendo trazabilidad
+entre la documentación examinada, los cálculos efectuados y los
+resultados obtenidos.
+
+</p>
+
+
+
+<h2>
+
+SEXTA CONCLUSIÓN
+
+</h2>
+
+
+<p>
+
+Los cuadros técnicos, matrices financieras, cronogramas de pago,
+liquidaciones y gráficos explicativos incorporados en los anexos forman
+parte integrante del presente Informe Pericial Contable y constituyen
+los elementos técnicos de verificación de los resultados expuestos.
+
+</p>
+
+
+<p>
+
+Los anexos gráficos correspondientes al comportamiento financiero de la
+obligación se encuentran incorporados en los
+<strong>Anexos Técnicos N.os 06, 07 y 08</strong>, incluyendo sus
+respectivos títulos, fuentes, leyendas e interpretación pericial.
+
+</p>
+
+
+
+<div class="footer">
+
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+
+<div>
+
+CAPÍTULO IV • CONCLUSIONES
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- ===================================================== -->
+<!--                 CAPÍTULO V                            -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
+<h2>
+
+CAPÍTULO V
+
+</h2>
+
+<h3>
+
+FECHA, FIRMA Y SELLO DEL PERITO CONTABLE
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+<h1>
+
+FECHA, FIRMA Y SELLO
+
+</h1>
+
+<p>
+
+En mérito al examen técnico efectuado, a la documentación analizada y a
+la reconstrucción financiera desarrollada en el presente Informe
+Pericial Contable de Parte, el suscrito Perito Contable emite el
+presente dictamen con absoluta independencia técnica, objetividad,
+imparcialidad y observancia de las normas profesionales aplicables al
+ejercicio de la pericia contable.
+
+</p>
+
+<p>
+
+Las conclusiones expuestas se sustentan en los procedimientos de examen
+realizados, en la documentación contractual revisada y en los anexos
+técnicos que forman parte integrante del presente informe, los cuales
+contienen el desarrollo detallado de las operaciones matemáticas,
+cronogramas financieros, matrices de reconstrucción, liquidaciones y
+representaciones gráficas que respaldan el presente dictamen.
+
+</p>
+
+<p>
+
+El presente Informe Pericial Contable consta de cinco (05) capítulos y
+nueve (09) anexos técnicos, los cuales deben ser interpretados de manera
+integral al constituir una sola unidad documental.
+
+</p>
+
+<br><br><br><br><br><br>
+
+<div style="text-align:center;">
+
+_________________________________________
+
+<br><br>
+
+<strong>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</strong>
+
+<br>
+
+Contador Público Colegiado
+
+<br>
+
+Matrícula N.° 55655
+
+<br>
+
+Perito Contable de Parte
+
+<br>
+
+DNI N.° 45060367
+
+</div>
+
+<br><br><br>
+
+<p style="text-align:right;">
+
+Lima, _____ de __________________ de 2026.
+
+</p>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+CAPÍTULO V • FIRMA DEL PERITO
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div style="margin-top:90mm;text-align:center;">
+
+<h1>
+
+ANEXOS TÉCNICOS
+
+</h1>
+
+<br><br>
+
+<h2>
+
+INFORME PERICIAL CONTABLE
+
+</h2>
+
+<br>
+
+<h2>
+
+CASO UMERES
+
+</h2>
+
+<br><br><br>
+
+<p style="text-align:center;">
+
+Los anexos que se incorporan a continuación contienen el sustento
+técnico-documental del presente Informe Pericial Contable y forman parte
+integrante del mismo.
+
+</p>
+
+<br><br>
+
+<p style="text-align:center;">
+
+Cronogramas financieros
+
+<br><br>
+
+Matrices de reconstrucción
+
+<br><br>
+
+Liquidaciones
+
+<br><br>
+
+Gráficos financieros
+
+<br><br>
+
+Validaciones matemáticas
+
+</p>
+
+</div>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+ANEXOS TÉCNICOS
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 01                    -->
+<!--        DOCUMENTACIÓN Y PARÁMETROS FINANCIEROS        -->
+<!-- ===================================================== -->
+
+
+<div class="page">
+
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 01
+
+</h2>
+
+<h3>
+
+DOCUMENTACIÓN EXAMINADA Y PARÁMETROS FINANCIEROS
+
+</h3>
+
+</div>
+
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+
+
+<h1>
+
+ANEXO TÉCNICO N.º 01
+
+</h1>
+
+
+<p>
+
+El presente anexo contiene la identificación de la documentación
+examinada por el suscrito Perito Contable, así como los parámetros
+económicos y financieros utilizados como base objetiva para la
+reconstrucción técnica de la obligación materia del presente informe.
+
+</p>
+
+
+
+<div class="caption">
+
+CUADRO N.º 01-A
+
+<br>
+
+DOCUMENTACIÓN EXAMINADA
+
+</div>
+
+
+
+<table>
+
+<tr>
+
+<th style="width:10%;">
+
+N.º
+
+</th>
+
+<th>
+
+DOCUMENTO EXAMINADO
+
+</th>
+
+<th>
+
+FINALIDAD DEL EXAMEN
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+01
+
+</td>
+
+<td>
+
+Contrato Privado de Préstamo de fecha 25/04/2015.
+
+</td>
+
+<td>
+
+Verificación del origen de la obligación económica.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+02
+
+</td>
+
+<td>
+
+Contrato Privado de Préstamo de fecha 03/06/2015.
+
+</td>
+
+<td>
+
+Verificación del segundo desembolso efectuado.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+03
+
+</td>
+
+<td>
+
+Contrato Privado de Préstamo de fecha 01/07/2015.
+
+</td>
+
+<td>
+
+Verificación del tercer desembolso efectuado.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+04
+
+</td>
+
+<td>
+
+Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago de fecha 01/09/2016.
+
+</td>
+
+<td>
+
+Determinación del capital reconocido y condiciones pactadas.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+05
+
+</td>
+
+<td>
+
+Documentación sustentatoria del pago efectuado.
+
+</td>
+
+<td>
+
+Determinación de pagos acreditados.
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+
+<div class="fuente">
+
+Fuente: Documentación proporcionada para el examen pericial.
+
+</div>
+
+
+
+
+<div class="caption">
+
+CUADRO N.º 01-B
+
+<br>
+
+PARÁMETROS FINANCIEROS UTILIZADOS
+
+</div>
+
+
+
+<table>
+
+<tr>
+
+<th>
+
+VARIABLE
+
+</th>
+
+<th>
+
+VALOR DETERMINADO
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Capital reconocido
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Fecha de reconocimiento de deuda
+
+</td>
+
+<td>
+
+01 de septiembre de 2016
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Número de cuotas pactadas
+
+</td>
+
+<td>
+
+36 cuotas mensuales
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Tasa convencional pactada
+
+</td>
+
+<td>
+
+2.50 % mensual
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Cuota contractual
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 2,012.05
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Pago acreditado
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,400.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Saldo de capital reconocido
+
+</td>
+
+<td style="text-align:right;">
+
+<strong>
+
+S/ 44,200.00
+
+</strong>
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+
+<div class="fuente">
+
+Fuente: Contrato Privado de Reconocimiento de Deuda y documentación de pago examinada.
+
+</div>
+
+
+
+
+<div class="caption">
+
+CUADRO N.º 01-C
+
+<br>
+
+RESUMEN DE LA OBLIGACIÓN
+
+</div>
+
+
+
+<table>
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th style="width:25%;">
+
+IMPORTE
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Capital reconocido inicialmente
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+(-) Pago acreditado
+
+</td>
+
+<td style="text-align:right;">
+
+(S/ 5,400.00)
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+
+Saldo capital pendiente
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 44,200.00
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Intereses financieros
+
+</td>
+
+<td>
+
+Según liquidación pericial desarrollada en Anexo Técnico N.º 05
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+
+Saldo total adeudado
+
+</th>
+
+<th>
+
+Según liquidación financiera final
+
+</th>
+
+</tr>
+
+
+</table>
+
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable conforme a la documentación examinada.
+
+</div>
+
+
+
+
+<div class="footer">
+
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+
+<div>
+
+ANEXO TÉCNICO N.º 01
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 02                    -->
+<!--             CRONOGRAMA FINANCIERO                    -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 02
+
+</h2>
+
+<h3>
+
+CRONOGRAMA FINANCIERO CONTRACTUAL
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+<h1>
+
+ANEXO TÉCNICO N.º 02
+
+</h1>
+
+<h2>
+
+CRONOGRAMA FINANCIERO CONTRACTUAL
+
+</h2>
+
+<p>
+
+El presente Anexo contiene la reconstrucción cronológica de la obligación
+económica reconocida mediante Contrato Privado de Reconocimiento de
+Deuda y Compromiso de Pago de fecha 01 de septiembre de 2016.
+
+</p>
+
+<p>
+
+La reconstrucción financiera se efectúa utilizando los parámetros
+expresamente pactados por las partes, con la finalidad de determinar el
+comportamiento del capital, los intereses generados, la amortización
+correspondiente a cada período y el saldo resultante de la obligación.
+
+</p>
+
+<h2>
+
+1. PARÁMETROS UTILIZADOS
+
+</h2>
+
+<div class="caption">
+
+CUADRO N.º 02-A
+
+<br>
+
+VARIABLES FINANCIERAS
+
+</div>
 
 <table>
 
@@ -1913,29 +4308,13 @@ VALOR
 
 <td>
 
-Capital Inicial
+Capital inicial
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
-49,600.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Tasa Mensual
-
-</td>
-
-<td>
-
-2.50 %
+S/ 49,600.00
 
 </td>
 
@@ -1945,7 +4324,39 @@ Tasa Mensual
 
 <td>
 
-Número de Cuotas
+Sistema financiero
+
+</td>
+
+<td>
+
+Cuota fija mensual
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tasa convencional
+
+</td>
+
+<td>
+
+2.50 % mensual
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Número de cuotas
 
 </td>
 
@@ -1961,11 +4372,11 @@ Número de Cuotas
 
 <td>
 
-Valor de la Cuota
+Valor de la cuota
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
 S/ 2,012.05
 
@@ -1981,7 +4392,7 @@ Pago acreditado
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
 S/ 5,400.00
 
@@ -1991,70 +4402,40 @@ S/ 5,400.00
 
 </table>
 
-<p>
+<div class="fuente">
 
-Con base en estos parámetros se efectuará la reconstrucción financiera
-contenida en el Anexo Técnico N.º 01, el cual forma parte integrante del
-presente Informe Pericial.
-
-</p>
-
-<div class="footer">
-
-CAPÍTULO III • RECONSTRUCCIÓN FINANCIERA
+Fuente: Contrato Privado de Reconocimiento de Deuda.
 
 </div>
-
-</div>
-<!-- ================================================= -->
-
-<!--       3.4 RECONSTRUCCIÓN DE LAS OBLIGACIONES       -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
 
 <h2>
 
-CAPÍTULO III
+2. METODOLOGÍA DE CÁLCULO
 
 </h2>
 
 <p>
 
-EXAMEN Y RECONSTRUCCIÓN FINANCIERA
+Para la reconstrucción del cronograma financiero se aplicó el sistema de
+amortización previsto en el contrato, calculándose para cada período el
+interés correspondiente sobre el saldo de capital, la amortización
+incluida en la cuota y el saldo pendiente luego de cada vencimiento.
 
 </p>
+
+<div class="caption">
+
+CUADRO N.º 02-B
+
+<br>
+
+FÓRMULAS UTILIZADAS
 
 </div>
-
-<h3>
-
-3.4 RECONSTRUCCIÓN DE LAS OBLIGACIONES ORIGINARIAS
-
-</h3>
-
-<p>
-
-Del examen de la documentación contractual se verifica que el
-reconocimiento de deuda celebrado el 01 de septiembre de 2016 tuvo como
-antecedente tres operaciones independientes de préstamo efectuadas
-durante el año 2015, las cuales fueron posteriormente consolidadas en
-una sola obligación.
-
-</p>
 
 <table>
 
 <tr>
-
-<th style="width:18%;">
-
-FECHA
-
-</th>
 
 <th>
 
@@ -2062,15 +4443,9 @@ OPERACIÓN
 
 </th>
 
-<th style="width:22%;">
-
-CAPITAL
-
-</th>
-
 <th>
 
-CONDICIÓN
+EXPRESIÓN
 
 </th>
 
@@ -2080,25 +4455,13 @@ CONDICIÓN
 
 <td>
 
-25/04/2015
+Interés del período
 
 </td>
 
 <td>
 
-Primer préstamo
-
-</td>
-
-<td>
-
-S/ 5,000.00
-
-</td>
-
-<td>
-
-Interés convencional 3% mensual
+Interés = Saldo Inicial × 2.50 %
 
 </td>
 
@@ -2108,25 +4471,13 @@ Interés convencional 3% mensual
 
 <td>
 
-03/06/2015
+Amortización
 
 </td>
 
 <td>
 
-Segundo préstamo
-
-</td>
-
-<td>
-
-S/ 5,000.00
-
-</td>
-
-<td>
-
-Interés convencional 3% mensual
+Cuota − Interés
 
 </td>
 
@@ -2136,103 +4487,13 @@ Interés convencional 3% mensual
 
 <td>
 
-01/07/2015
+Saldo Final
 
 </td>
 
 <td>
 
-Tercer préstamo
-
-</td>
-
-<td>
-
-S/ 25,000.00
-
-</td>
-
-<td>
-
-Retribución fija mensual de S/ 800.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<th colspan="2">
-
-TOTAL CAPITAL ENTREGADO
-
-</th>
-
-<th>
-
-S/ 35,000.00
-
-</th>
-
-<th>
-
-</th>
-
-</tr>
-
-</table>
-
-<p>
-
-Las operaciones descritas constituyen el origen económico de la
-obligación posteriormente reconocida mediante contrato privado de
-reconocimiento de deuda.
-
-</p>
-
-<h3>
-
-3.5 DETERMINACIÓN DEL CAPITAL RECONOCIDO
-
-</h3>
-
-<p>
-
-Conforme al Contrato Privado de Reconocimiento de Deuda y Compromiso de
-Pago, las partes consolidaron las obligaciones existentes en un capital
-ascendente a:
-
-</p>
-
-<table>
-
-<tr>
-
-<th>
-
-CONCEPTO
-
-</th>
-
-<th style="width:30%;">
-
-IMPORTE
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Capital reconocido
-
-</td>
-
-<td>
-
-<strong>S/ 49,600.00</strong>
+Saldo Inicial − Amortización
 
 </td>
 
@@ -2240,347 +4501,49 @@ Capital reconocido
 
 </table>
 
-<p>
+<div class="fuente">
 
-Este importe constituye la base objetiva para el desarrollo de la
-reconstrucción financiera y será utilizado como saldo inicial del
-cronograma contenido en el Anexo Técnico N.º 01.
-
-</p>
-
-<h3>
-
-3.6 VERIFICACIÓN DEL PAGO ACREDITADO
-
-</h3>
-
-<p>
-
-Del examen de la documentación incorporada al expediente se verificó la
-existencia de un único pago acreditado por la suma de
-<strong>S/ 5,400.00</strong>, no habiéndose identificado documentación
-que sustente la realización de otros pagos parciales o totales durante
-la vigencia de la obligación.
-
-</p>
-
-<table>
-
-<tr>
-
-<th>
-
-CONCEPTO
-
-</th>
-
-<th style="width:30%;">
-
-IMPORTE
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Pago acreditado documentalmente
-
-</td>
-
-<td>
-
-S/ 5,400.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Otros pagos acreditados
-
-</td>
-
-<td>
-
-No se acreditan
-
-</td>
-
-</tr>
-
-</table>
-
-<p>
-
-En consecuencia, la reconstrucción financiera desarrollada en el presente
-Informe Pericial considera exclusivamente el pago antes indicado,
-preservando la correspondencia entre la evidencia documental y las
-operaciones matemáticas efectuadas.
-
-</p>
-
-<div class="footer">
-
-CAPÍTULO III • EXAMEN FINANCIERO
+Fuente: Elaboración propia.
 
 </div>
-
-</div>
-
-<!-- ================================================= -->
-
-<!--         3.7 METODOLOGÍA DE RECONSTRUCCIÓN          -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
 
 <h2>
 
-CAPÍTULO III
+3. CRONOGRAMA FINANCIERO
 
 </h2>
 
 <p>
 
-METODOLOGÍA DE RECONSTRUCCIÓN
+El cuadro siguiente contiene la reconstrucción financiera completa de la
+obligación correspondiente a los treinta y seis (36) períodos
+contractuales.
 
 </p>
 
-</div>
+<div class="caption">
 
-<h3>
+CUADRO N.º 02-C
 
-3.7 METODOLOGÍA APLICADA
-
-</h3>
-
-<p>
-
-La reconstrucción financiera desarrollada en el presente Informe
-Pericial se efectuó aplicando exclusivamente las condiciones pactadas
-por las partes, sin incorporar modificaciones contractuales ni criterios
-financieros ajenos a la documentación examinada.
-
-</p>
-
-<table>
-
-<tr>
-
-<th style="width:10%;">
-
-ETAPA
-
-</th>
-
-<th>
-
-DESCRIPCIÓN
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-1
-
-</td>
-
-<td>
-
-Determinación del capital reconocido.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-2
-
-</td>
-
-<td>
-
-Aplicación de la tasa convencional del 2.50% mensual.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-3
-
-</td>
-
-<td>
-
-Determinación de intereses por período.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-4
-
-</td>
-
-<td>
-
-Determinación de la amortización del capital.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-5
-
-</td>
-
-<td>
-
-Aplicación del pago acreditado.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-6
-
-</td>
-
-<td>
-
-Determinación del saldo económico resultante.
-
-</td>
-
-</tr>
-
-</table>
-
-<h3>
-
-3.8 OBSERVACIÓN PERICIAL
-
-</h3>
-
-<p>
-
-La determinación del saldo económico no constituye una estimación
-subjetiva del perito, sino el resultado matemático obtenido mediante la
-reconstrucción cronológica de la obligación conforme a los parámetros
-contractuales y a la documentación examinada.
-
-</p>
-
-<p>
-
-El desarrollo íntegro de las operaciones matemáticas se incorpora en los
-Anexos Técnicos del presente Informe Pericial, los cuales forman parte
-integrante del dictamen.
-
-</p>
-
-<div class="footer">
-
-CAPÍTULO III • METODOLOGÍA
-
-</div>
-
-</div>
-<!-- ================================================= -->
-
-<!--             ANEXO TÉCNICO N.º 01                  -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-ANEXO TÉCNICO N.º 01
-
-</h2>
-
-<p>
+<br>
 
 CRONOGRAMA FINANCIERO CONTRACTUAL
 
-</p>
-
 </div>
 
-<h1>
-
-CRONOGRAMA FINANCIERO
-
-</h1>
-
-<p>
-
-Con la finalidad de verificar el comportamiento económico de la
-obligación reconocida mediante Contrato Privado de Reconocimiento de
-Deuda y Compromiso de Pago, se desarrolla el presente cronograma
-financiero aplicando exclusivamente los parámetros pactados por las
-partes.
-
-</p>
-
-<p>
-
-La reconstrucción se efectúa utilizando como base un capital de
-<strong>S/ 49,600.00</strong>, una tasa convencional de
-<strong>2.50 % mensual</strong>, un plazo de
-<strong>36 meses</strong> y una cuota contractual de
-<strong>S/ 2,012.05</strong>.
-
-</p>
-
-<table id="cronograma">
+<table id="cronogramaFinanciero">
 
 <thead>
 
 <tr>
 
-<th style="width:6%;">
+<th>
 
 N°
 
 </th>
 
-<th style="width:14%;">
+<th>
 
 Fecha
 
@@ -2622,7 +4585,7 @@ Saldo Final
 
 <tbody>
 
-<!-- GENERADO AUTOMÁTICAMENTE -->
+<!-- EL JAVASCRIPT INSERTARÁ AUTOMÁTICAMENTE LAS 36 CUOTAS -->
 
 </tbody>
 
@@ -2636,23 +4599,23 @@ TOTALES
 
 </th>
 
-<th id="tCapital">
+<th id="cfCapital">
 
 </th>
 
-<th id="tInteres">
+<th id="cfInteres">
 
 </th>
 
-<th id="tAmortizacion">
+<th id="cfAmortizacion">
 
 </th>
 
-<th id="tCuotas">
+<th id="cfCuotas">
 
 </th>
 
-<th id="tSaldo">
+<th id="cfSaldo">
 
 </th>
 
@@ -2662,1120 +4625,104 @@ TOTALES
 
 </table>
 
-<p>
+<div class="fuente">
 
-El cronograma precedente constituye la representación matemática de la
-obligación pactada y sirve como base para la elaboración de las matrices
-de reconstrucción financiera incorporadas en los anexos siguientes.
+Fuente: Elaboración propia del Perito Contable.
 
-</p>
+</div>
 
 <div class="footer">
 
-ANEXO TÉCNICO N.º 01
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+ANEXO TÉCNICO N.º 02
 
 </div>
 
 </div>
 
-<!-- ================================================= -->
-
-<!--      ANEXO TÉCNICO N.º 02                         -->
-
-<!-- ================================================= -->
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 03                    -->
+<!--           MATRIZ DE RECONSTRUCCIÓN FINANCIERA         -->
+<!-- ===================================================== -->
 
 <div class="page">
 
 <div class="header">
 
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
 <h2>
 
-ANEXO TÉCNICO N.º 02
+ANEXO TÉCNICO N.º 03
 
 </h2>
 
-<p>
+<h3>
 
 MATRIZ DE RECONSTRUCCIÓN FINANCIERA
 
-</p>
-
-</div>
-
-<h1>
-
-RECONSTRUCCIÓN DE LA OBLIGACIÓN
-
-</h1>
-
-<p>
-
-La presente matriz resume la evolución económica de la obligación desde
-los préstamos originarios hasta el reconocimiento de deuda.
-
-</p>
-
-<table>
-
-<tr>
-
-<th>
-
-OPERACIÓN
-
-</th>
-
-<th style="width:25%;">
-
-IMPORTE
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Primer préstamo
-
-</td>
-
-<td>
-
-S/ 5,000.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Segundo préstamo
-
-</td>
-
-<td>
-
-S/ 5,000.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Tercer préstamo
-
-</td>
-
-<td>
-
-S/ 25,000.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-
-Capital originalmente entregado
-
-</th>
-
-<th>
-
-S/ 35,000.00
-
-</th>
-
-</tr>
-
-<tr>
-
-<th>
-
-Capital reconocido mediante contrato
-
-</th>
-
-<th>
-
-S/ 49,600.00
-
-</th>
-
-</tr>
-
-</table>
-
-<h3>
-
-OBSERVACIÓN TÉCNICA
-
 </h3>
 
-<p>
-
-La diferencia entre el capital originalmente entregado y el capital
-reconocido forma parte de la consolidación contractual efectuada por las
-partes mediante el reconocimiento de deuda y constituye el importe base
-de la reconstrucción financiera desarrollada en el presente informe.
-
-</p>
-
-<div class="footer">
-
-ANEXO TÉCNICO N.º 02
-
 </div>
 
-</div>
-
-<!-- ================================================= -->
-
-<!--      ANEXO TÉCNICO N.º 03                         -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-ANEXO TÉCNICO N.º 03
-
-</h2>
-
-<p>
-
-APLICACIÓN DEL PAGO ACREDITADO
-
-</p>
-
-</div>
-
-<h1>
-
-PAGO DOCUMENTALMENTE ACREDITADO
-
-</h1>
-
-<p>
-
-Del examen de la documentación incorporada al expediente únicamente se
-ha acreditado un pago por la suma de
-<strong>S/ 5,400.00</strong>, el cual será considerado en la
-reconstrucción financiera.
-
-</p>
-
-<table>
-
-<tr>
-
-<th>
-
-CONCEPTO
-
-</th>
-
-<th style="width:25%;">
-
-IMPORTE
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Pago acreditado
-
-</td>
-
-<td>
-
-S/ 5,400.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Otros pagos
-
-</td>
-
-<td>
-
-No acreditados
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Documentación sustentatoria
-
-</td>
-
-<td>
-
-Verificada
-
-</td>
-
-</tr>
-
-</table>
-
-<p>
-
-La incidencia financiera del referido pago será considerada para la
-determinación del saldo económico resultante, respetando la cronología
-de los hechos económicos y los parámetros establecidos en el contrato.
-
-</p>
-
-<div class="footer">
-
-ANEXO TÉCNICO N.º 03
-
-</div>
-
-</div>
-<!-- ================================================= -->
-
-<!--             ANEXO TÉCNICO N.º 04                  -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-ANEXO TÉCNICO N.º 04
-
-</h2>
-
-<p>
-
-DETERMINACIÓN DEL SALDO INSOLUTO
-
-</p>
-
-</div>
-
-<h1>
-
-DETERMINACIÓN DEL SALDO ECONÓMICO
-
-</h1>
-
-<p>
-
-Concluida la reconstrucción financiera y verificada la documentación
-examinada, corresponde determinar el saldo económico resultante de la
-obligación, considerando el capital reconocido, los intereses
-convencionales, el cronograma contractual y el único pago acreditado
-documentalmente.
-
-</p>
-
-<table>
-
-<tr>
-
-<th>
-
-CONCEPTO
-
-</th>
-
-<th style="width:28%;">
-
-IMPORTE (S/)
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Capital reconocido
-
-</td>
-
-<td id="capitalReconocido">
-
-49,600.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Intereses generados
-
-</td>
-
-<td id="interesesGenerados">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Total obligación reconstruida
-
-</td>
-
-<td id="totalObligacion">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Pago acreditado
-
-</td>
-
-<td>
-
-5,400.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-
-Saldo económico resultante
-
-</th>
-
-<th id="saldoResultante">
-
--
-
-</th>
-
-</tr>
-
-</table>
-
-<p>
-
-Los importes precedentes serán determinados automáticamente mediante la
-reconstrucción matemática desarrollada en el presente archivo HTML,
-garantizando la trazabilidad entre los cálculos efectuados y las
-conclusiones contenidas en el informe.
-
-</p>
-
-<div class="footer">
-
-ANEXO TÉCNICO N.º 04
-
-</div>
-
-</div>
-
-<!-- ================================================= -->
-
-<!--             ANEXO TÉCNICO N.º 05                  -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-ANEXO TÉCNICO N.º 05
-
-</h2>
-
-<p>
-
-GRÁFICOS FINANCIEROS
-
-</p>
-
-</div>
-
-<h1>
-
-REPRESENTACIÓN GRÁFICA
-
-</h1>
-
-<p>
-
-Con la finalidad de facilitar la comprensión del comportamiento
-financiero de la obligación, se incorporan los siguientes gráficos
-estadísticos, los cuales serán generados automáticamente con la
-información obtenida del cronograma financiero.
-
-</p>
-
-<h3>
-
-Gráfico N.º 01
-
-</h3>
-
-<p>
-
-Evolución del saldo de capital.
-
-</p>
-
-<canvas
-
-id="graficoCapital"
-
-width="640"
-
-height="300"
-
-style="border:1px solid #000;">
-
-</canvas>
-
-<br><br>
-
-<h3>
-
-Gráfico N.º 02
-
-</h3>
-
-<p>
-
-Intereses versus amortización.
-
-</p>
-
-<canvas
-
-id="graficoInteres"
-
-width="640"
-
-height="300"
-
-style="border:1px solid #000;">
-
-</canvas>
-
-<br><br>
-
-<h3>
-
-Gráfico N.º 03
-
-</h3>
-
-<p>
-
-Composición económica de la obligación.
-
-</p>
-
-<canvas
-
-id="graficoCircular"
-
-width="640"
-
-height="300"
-
-style="border:1px solid #000;">
-
-</canvas>
-
-<div class="footer">
-
-ANEXO TÉCNICO N.º 05
-
-</div>
-
-</div>
-
-<!-- ================================================= -->
-
-<!--             ANEXO TÉCNICO N.º 06                  -->
-
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<table style="border:none;margin-bottom:5px;">
-
-<tr style="border:none;">
-
-<td style="border:none;width:15%;">
-
-<img src="logo.png"
-
-style="width:60px;">
-
-</td>
-
-<td style="border:none;text-align:center;">
-
-<div style="font-size:20px;font-weight:bold;">
-
-INFORME PERICIAL CONTABLE
-
-</div>
-
-<div style="font-size:14px;">
-
-C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
-
-</div>
-
-<div style="font-size:13px;">
-
-CONTADOR PÚBLICO COLEGIADO
-
-</div>
-
-<div style="font-size:13px;">
-
-PERITO CONTABLE DE PARTE
-
-</div>
-
-</td>
-
-<td style="border:none;width:15%;text-align:right;">
-
-AÑO
-
-<br>
+<div class="header-right">
 
 2026
 
-</td>
-
-</tr>
-
-</table>
-
-<hr style="border:1px solid #990000;">
+</div>
 
 </div>
 
-<h2>
-
-ANEXO TÉCNICO N.º 06
-
-</h2>
-
-<p>
-
-VALIDACIÓN MATEMÁTICA
-
-</p>
-
-</div>
 
 <h1>
 
-CONTROL DE CONSISTENCIA
+ANEXO TÉCNICO N.º 03
 
 </h1>
 
+
+<h2>
+
+MATRIZ DE RECONSTRUCCIÓN FINANCIERA DE LA OBLIGACIÓN
+
+</h2>
+
+
 <p>
 
-Como mecanismo de control interno del presente Informe Pericial se
-incorpora la siguiente matriz de validación matemática, mediante la cual
-se verifica la consistencia de la reconstrucción financiera.
+El presente anexo contiene la matriz técnica de reconstrucción de la
+obligación económica materia del presente Informe Pericial Contable,
+permitiendo identificar la evolución financiera desde el origen de las
+operaciones hasta la determinación del saldo pendiente.
 
 </p>
+
+
+<div class="caption">
+
+CUADRO N.º 03-A
+
+<br>
+
+RECONSTRUCCIÓN DEL ORIGEN DE LA OBLIGACIÓN
+
+</div>
+
 
 <table>
 
-<tr>
-
-<th>
-
-CONTROL
-
-</th>
-
-<th style="width:25%;">
-
-RESULTADO
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Capital Inicial
-
-</td>
-
-<td id="vCapital">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Σ Intereses
-
-</td>
-
-<td id="vInteres">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Σ Amortización
-
-</td>
-
-<td id="vAmortizacion">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Σ Cuotas
-
-</td>
-
-<td id="vCuotas">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Pago acreditado
-
-</td>
-
-<td>
-
-5,400.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Saldo final
-
-</td>
-
-<td id="vSaldo">
-
--
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-
-Estado
-
-</th>
-
-<th id="vEstado">
-
-CONFORME
-
-</th>
-
-</tr>
-
-</table>
-
-<p>
-
-La presente matriz constituye un mecanismo de aseguramiento de la
-calidad del cálculo financiero y permite verificar que la reconstrucción
-efectuada mantiene consistencia matemática entre los datos de entrada,
-las operaciones realizadas y los resultados obtenidos.
-
-</p>
-
-<div class="footer">
-
-ANEXO TÉCNICO N.º 06
-
-</div>
-
-</div>
-<!-- ================================================= -->
-<!--              CAPÍTULO IV                           -->
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-CAPÍTULO IV
-
-</h2>
-
-<p>
-
-CONCLUSIONES
-
-</p>
-
-</div>
-
-<h1>
-
-CONCLUSIONES
-
-</h1>
-
-<p>
-
-Como resultado del examen documental, análisis contable y reconstrucción
-financiera desarrollada en el presente Informe Pericial Contable, el
-suscrito perito formula las siguientes conclusiones:
-
-</p>
-
-<h3>
-
-PRIMERA:
-
-</h3>
-
-<p>
-
-Se verificó que la obligación materia de examen tuvo su origen en tres
-operaciones de préstamo celebradas durante el año 2015, las cuales fueron
-posteriormente consolidadas mediante Contrato Privado de Reconocimiento
-de Deuda y Compromiso de Pago de fecha 01 de septiembre de 2016.
-
-</p>
-
-
-<h3>
-
-SEGUNDA:
-
-</h3>
-
-<p>
-
-Conforme al documento contractual examinado, las partes reconocieron una
-obligación económica ascendente a la suma de
-<strong>S/ 49,600.00</strong>, estableciendo como condiciones financieras
-un plazo de treinta y seis (36) meses, una tasa convencional de
-<strong>2.50 % mensual</strong> y una cuota pactada de
-<strong>S/ 2,012.05</strong>.
-
-</p>
-
-
-<h3>
-
-TERCERA:
-
-</h3>
-
-<p>
-
-La reconstrucción financiera efectuada reproduce matemáticamente la
-evolución de la obligación conforme a los parámetros contractuales,
-permitiendo identificar en cada período la generación de intereses, la
-amortización del capital y la variación del saldo insoluto.
-
-</p>
-
-
-<h3>
-
-CUARTA:
-
-</h3>
-
-<p>
-
-Del examen documental efectuado se verificó la existencia de un único
-pago acreditado por la suma de
-<strong>S/ 5,400.00</strong>, no habiéndose identificado documentación
-que sustente la existencia de otros pagos durante el período analizado.
-
-</p>
-
-
-<h3>
-
-QUINTA:
-
-</h3>
-
-<p>
-
-Los cronogramas financieros, matrices técnicas y cuadros de validación
-incorporados como anexos forman parte integrante del presente dictamen y
-constituyen el sustento cuantitativo de los resultados obtenidos.
-
-</p>
-
-
-<h3>
-
-SEXTA:
-
-</h3>
-
-<p>
-
-La determinación del saldo económico resultante constituye el resultado
-matemático derivado de la aplicación de las condiciones contractuales y
-de los pagos documentalmente acreditados, sin incorporar modificaciones
-o supuestos distintos a los contenidos en la documentación examinada.
-
-</p>
-
-
-<h3>
-
-SÉPTIMA:
-
-</h3>
-
-<p>
-
-El presente Informe Pericial ha sido elaborado bajo criterios de
-objetividad, independencia técnica, trazabilidad documental y
-reproducibilidad matemática, permitiendo que los cálculos efectuados
-puedan ser verificados por cualquier profesional especializado.
-
-</p>
-
-
-<div class="footer">
-
-CAPÍTULO IV • CONCLUSIONES
-
-</div>
-
-</div>
-
-
-
-<!-- ================================================= -->
-<!--              CAPÍTULO V                            -->
-<!-- ================================================= -->
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-CAPÍTULO V
-
-</h2>
-
-<p>
-
-FECHA, FIRMA Y SELLO
-
-</p>
-
-</div>
-
-
-<h1>
-
-FECHA, FIRMA Y SELLO
-
-</h1>
-
-
-<p>
-
-Por las consideraciones expuestas, el suscrito emite el presente
-Informe Pericial Contable de Parte, dejando constancia que las
-conclusiones contenidas en el mismo han sido elaboradas con criterio
-técnico, independencia profesional y observancia de los procedimientos
-propios de la actividad pericial contable.
-
-</p>
-
-
-<p>
-
-Los resultados expuestos se sustentan exclusivamente en la documentación
-examinada, los procedimientos financieros desarrollados y los cálculos
-contenidos en los anexos técnicos integrantes del presente informe.
-
-</p>
-
-
-<br><br><br><br>
-
-
-<div style="text-align:center;">
-
-_____________________________________
-
-<br><br>
-
-<strong>
-
-C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
-
-</strong>
-
-<br>
-
-Contador Público Colegiado
-
-<br>
-
-Perito Contable de Parte
-
-<br>
-
-Matrícula N.º 55655
-
-</div>
-
-
-<br><br><br>
-
-
-<p style="text-align:center;">
-
-Cusco, ____ de ______________ de 2026
-
-</p>
-
-
-<div class="footer">
-
-CAPÍTULO V • FIRMA DEL PERITO
-
-</div>
-
-
-</div>
-
-
-
-<!-- ================================================= -->
-<!--          ANEXO TÉCNICO N.º 07                    -->
-<!-- ================================================= -->
-
-
-<div class="page">
-
-<div class="header">
-
-<h2>
-
-ANEXO TÉCNICO N.º 07
-
-</h2>
-
-<p>
-
-LÍNEA DE TIEMPO FINANCIERA
-
-</p>
-
-</div>
-
-
-<h1>
-
-EVOLUCIÓN CRONOLÓGICA DE LA OBLIGACIÓN
-
-</h1>
-
-
-<table>
 
 <tr>
 
@@ -3787,7 +4734,13 @@ FECHA
 
 <th>
 
-ACONTECIMIENTO
+CONCEPTO
+
+</th>
+
+<th>
+
+IMPORTE
 
 </th>
 
@@ -3808,6 +4761,12 @@ Primer préstamo otorgado.
 
 </td>
 
+<td style="text-align:right;">
+
+S/ 5,000.00
+
+</td>
+
 </tr>
 
 
@@ -3822,6 +4781,12 @@ Primer préstamo otorgado.
 <td>
 
 Segundo préstamo otorgado.
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,000.00
 
 </td>
 
@@ -3842,20 +4807,9 @@ Tercer préstamo otorgado.
 
 </td>
 
-</tr>
+<td style="text-align:right;">
 
-
-<tr>
-
-<td>
-
-01/09/2016
-
-</td>
-
-<td>
-
-Reconocimiento de deuda y compromiso de pago.
+S/ 25,000.00
 
 </td>
 
@@ -3864,15 +4818,75 @@ Reconocimiento de deuda y compromiso de pago.
 
 <tr>
 
+<th colspan="2">
+
+TOTAL CAPITAL ENTREGADO
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 35,000.00
+
+</th>
+
+</tr>
+
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Contratos privados de préstamo examinados.
+
+</div>
+
+
+
+
+<div class="caption">
+
+CUADRO N.º 03-B
+
+<br>
+
+CONSOLIDACIÓN CONTRACTUAL DE LA DEUDA
+
+</div>
+
+
+<table>
+
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th>
+
+IMPORTE
+
+</th>
+
+</tr>
+
+
+<tr>
+
 <td>
 
-01/10/2016
+Capital entregado identificado
 
 </td>
 
-<td>
+<td style="text-align:right;">
 
-Inicio del cronograma contractual.
+S/ 35,000.00
 
 </td>
 
@@ -3883,13 +4897,30 @@ Inicio del cronograma contractual.
 
 <td>
 
-01/09/2019
+Importe reconocido mediante contrato
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Diferencia incorporada en reconocimiento contractual
 
 </td>
 
 <td>
 
-Vencimiento del plazo contractual.
+Según acuerdo celebrado entre las partes.
 
 </td>
 
@@ -3899,583 +4930,2416 @@ Vencimiento del plazo contractual.
 </table>
 
 
-<h3>
+<div class="fuente">
 
-OBSERVACIÓN PERICIAL
+Fuente: Contrato Privado de Reconocimiento de Deuda y Compromiso de Pago.
 
-</h3>
+</div>
+
+
+
+<h2>
+
+3.1 EVOLUCIÓN DE LA OBLIGACIÓN
+
+</h2>
+
+
+<div class="caption">
+
+CUADRO N.º 03-C
+
+<br>
+
+SECUENCIA FINANCIERA DE LA DEUDA
+
+</div>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+
+ETAPA
+
+</th>
+
+<th>
+
+DESCRIPCIÓN
+
+</th>
+
+<th>
+
+RESULTADO
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+01
+
+</td>
+
+<td>
+
+Entrega de capital mediante préstamos.
+
+</td>
+
+<td>
+
+S/ 35,000.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+02
+
+</td>
+
+<td>
+
+Reconocimiento contractual de deuda.
+
+</td>
+
+<td>
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+03
+
+</td>
+
+<td>
+
+Aplicación del pago acreditado.
+
+</td>
+
+<td>
+
+(S/ 5,400.00)
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+04
+
+</td>
+
+<td>
+
+Saldo de capital pendiente.
+
+</td>
+
+<td>
+
+S/ 44,200.00
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+05
+
+</td>
+
+<td>
+
+Liquidación financiera de intereses.
+
+</td>
+
+<td>
+
+Según Anexo Técnico N.º 05
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+
+
+
+<h2>
+
+3.2 MATRIZ DE CONTROL PERICIAL
+
+</h2>
+
+
+<div class="caption">
+
+CUADRO N.º 03-D
+
+<br>
+
+VALIDACIÓN DE COMPONENTES ECONÓMICOS
+
+</div>
+
+
+<table>
+
+
+<tr>
+
+<th>
+
+ELEMENTO
+
+</th>
+
+<th>
+
+VALIDACIÓN
+
+</th>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Capital reconocido
+
+</td>
+
+<td>
+
+Verificado en contrato de reconocimiento de deuda.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Pagos considerados
+
+</td>
+
+<td>
+
+Únicamente pagos con sustento documental.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Tasa financiera aplicada
+
+</td>
+
+<td>
+
+Conforme a pacto contractual.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Cronograma financiero
+
+</td>
+
+<td>
+
+Desarrollado en Anexo Técnico N.º 02.
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+Liquidación final
+
+</td>
+
+<td>
+
+Desarrollada en Anexo Técnico N.º 05.
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+
 
 
 <p>
 
-La línea de tiempo precedente permite visualizar la secuencia de los
-hechos económicos examinados y facilita la comprensión del proceso de
-formación, reconocimiento y evolución financiera de la obligación.
+La presente matriz constituye un resumen técnico de control y
+trazabilidad de la obligación, siendo complementada con el cronograma
+financiero, la liquidación económica y los gráficos de comportamiento
+financiero incorporados en los anexos siguientes.
 
 </p>
 
 
 <div class="footer">
 
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+
+<div>
+
+ANEXO TÉCNICO N.º 03
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 04                    -->
+<!--         APLICACIÓN DEL PAGO ACREDITADO               -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 04
+
+</h2>
+
+<h3>
+
+APLICACIÓN DEL PAGO ACREDITADO
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+<h1>
+
+ANEXO TÉCNICO N.º 04
+
+</h1>
+
+<h2>
+
+ANÁLISIS DEL PAGO ACREDITADO
+
+</h2>
+
+<p>
+
+El presente Anexo tiene por finalidad determinar la incidencia económica
+del único pago acreditado documentalmente durante la vigencia de la
+obligación objeto del presente Informe Pericial.
+
+</p>
+
+<p>
+
+Como resultado del examen documental efectuado por el suscrito Perito
+Contable, únicamente se verificó un pago parcial por la suma de
+<strong>S/ 5,400.00</strong>, no habiéndose identificado documentos que
+acrediten la existencia de otros pagos o cancelaciones parciales.
+
+</p>
+
+<div class="caption">
+
+CUADRO N.º 04-A
+
+<br>
+
+PAGO DOCUMENTALMENTE ACREDITADO
+
+</div>
+
+<table>
+
+<tr>
+
+<th style="width:18%;">
+
+FECHA
+
+</th>
+
+<th>
+
+DESCRIPCIÓN
+
+</th>
+
+<th style="width:22%;">
+
+IMPORTE
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+Según documento examinado
+
+</td>
+
+<td>
+
+Pago parcial efectuado por la deudora.
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,400.00
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Documento sustentatorio del pago incorporado al expediente.
+
+</div>
+
+<h2>
+
+4.1 IMPUTACIÓN FINANCIERA
+
+</h2>
+
+<p>
+
+Conforme a la reconstrucción financiera efectuada, el pago acreditado ha
+sido considerado para efectos de determinar el saldo de capital
+pendiente, respetando la cronología de la obligación y las condiciones
+financieras pactadas por las partes.
+
+</p>
+
+<div class="caption">
+
+CUADRO N.º 04-B
+
+<br>
+
+IMPUTACIÓN DEL PAGO
+
+</div>
+
+<table>
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th style="width:28%;">
+
+IMPORTE
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+Capital reconocido contractualmente
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Pago acreditado
+
+</td>
+
+<td style="text-align:right;">
+
+(S/ 5,400.00)
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Saldo de capital
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 44,200.00
+
+</th>
+
+</tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+<h2>
+
+4.2 CONSIDERACIONES PERICIALES
+
+</h2>
+
+<p>
+
+El presente Informe Pericial únicamente considera pagos que cuentan con
+respaldo documental. En consecuencia, cualquier pago no acreditado
+mediante documento idóneo no ha sido incorporado en la reconstrucción
+financiera desarrollada.
+
+</p>
+
+<p>
+
+La determinación del saldo económico definitivo, incluyendo la
+liquidación de intereses convencionales, se desarrolla en el
+<strong>Anexo Técnico N.º 05</strong>, el cual forma parte integrante
+del presente Informe Pericial.
+
+</p>
+
+<div class="caption">
+
+CUADRO N.º 04-C
+
+<br>
+
+RESUMEN DE LA APLICACIÓN DEL PAGO
+
+</div>
+
+<table>
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th>
+
+RESULTADO
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+Capital reconocido
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Pago acreditado
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,400.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Saldo de capital pendiente
+
+</td>
+
+<td style="text-align:right;">
+
+<strong>S/ 44,200.00</strong>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Liquidación de intereses
+
+</td>
+
+<td>
+
+Véase Anexo Técnico N.º 05.
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable conforme a la documentación examinada.
+
+</div>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+ANEXO TÉCNICO N.º 04
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 05                    -->
+<!--          LIQUIDACIÓN FINANCIERA DE LA OBLIGACIÓN     -->
+<!-- ===================================================== -->
+
+
+<div class="page">
+
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 05
+
+</h2>
+
+<h3>
+
+LIQUIDACIÓN FINANCIERA DE LA OBLIGACIÓN
+
+</h3>
+
+</div>
+
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+
+
+<h1>
+
+ANEXO TÉCNICO N.º 05
+
+</h1>
+
+
+
+<h2>
+
+LIQUIDACIÓN FINANCIERA DE LA DEUDA
+
+</h2>
+
+
+
+<p>
+
+El presente Anexo Técnico tiene por finalidad determinar el resultado
+económico de la obligación materia del presente Informe Pericial,
+considerando el capital reconocido contractualmente, los pagos
+acreditados documentalmente y la liquidación financiera desarrollada
+conforme a los parámetros establecidos por las partes.
+
+</p>
+
+
+
+<h2>
+
+5.1 BASE DE LIQUIDACIÓN
+
+</h2>
+
+
+
+<div class="caption">
+
+CUADRO N.º 05-A
+
+<br>
+
+DATOS BASE PARA LA LIQUIDACIÓN
+
+</div>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th style="width:30%;">
+
+VALOR
+
+</th>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Capital reconocido mediante contrato
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Fecha de reconocimiento de deuda
+
+</td>
+
+<td>
+
+01 de septiembre de 2016
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Plazo contractual
+
+</td>
+
+<td>
+
+36 meses
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Tasa pactada
+
+</td>
+
+<td>
+
+2.50 % mensual
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Pago acreditado
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,400.00
+
+</td>
+
+</tr>
+
+
+</table>
+
+
+
+<div class="fuente">
+
+Fuente: Contrato Privado de Reconocimiento de Deuda y documentación examinada.
+
+</div>
+
+
+
+
+<h2>
+
+5.2 DETERMINACIÓN DEL CAPITAL PENDIENTE
+
+</h2>
+
+
+
+<p>
+
+De acuerdo con la documentación examinada, el capital reconocido por las
+partes ascendió a S/ 49,600.00, habiéndose acreditado únicamente un pago
+por S/ 5,400.00.
+
+</p>
+
+
+
+<div class="caption">
+
+CUADRO N.º 05-B
+
+<br>
+
+DETERMINACIÓN DEL CAPITAL INSOLUTO
+
+</div>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+
+CONCEPTO
+
+</th>
+
+<th>
+
+IMPORTE
+
+</th>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Capital reconocido
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+(-) Pago acreditado
+
+</td>
+
+<td style="text-align:right;">
+
+(S/ 5,400.00)
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<th>
+
+CAPITAL INSOLUTO
+
+</th>
+
+<th style="text-align:right;">
+
+S/ 44,200.00
+
+</th>
+
+</tr>
+
+
+</table>
+
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+
+
+
+<h2>
+
+5.3 LIQUIDACIÓN DE INTERESES
+
+</h2>
+
+
+
+<p>
+
+La liquidación de intereses se efectúa considerando las condiciones
+financieras pactadas en el Contrato Privado de Reconocimiento de Deuda y
+Compromiso de Pago, aplicando la tasa establecida para cada período de
+cálculo.
+
+</p>
+
+
+
+<p>
+
+El desarrollo detallado período por período se encuentra incorporado en
+el cronograma financiero del
+<strong>Anexo Técnico N.º 02</strong>, que forma parte integrante del
+presente informe.
+
+</p>
+
+
+
+
+<div class="caption">
+
+CUADRO N.º 05-C
+
+<br>
+
+RESUMEN DE LIQUIDACIÓN FINANCIERA
+
+</div>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+
+COMPONENTE
+
+</th>
+
+<th style="width:30%;">
+
+RESULTADO
+
+</th>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Capital reconocido
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Intereses liquidados
+
+</td>
+
+<td id="resultadoIntereses">
+
+Pendiente de cálculo
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+
+Pagos acreditados
+
+</td>
+
+<td style="text-align:right;">
+
+(S/ 5,400.00)
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<th>
+
+TOTAL ADEUDADO
+
+</th>
+
+<th id="resultadoTotal">
+
+Pendiente de cálculo
+
+</th>
+
+</tr>
+
+
+
+</table>
+
+
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable conforme a la reconstrucción financiera.
+
+</div>
+
+
+
+
+<h2>
+
+5.4 INTERPRETACIÓN PERICIAL
+
+</h2>
+
+
+
+<p>
+
+Del análisis financiero efectuado se determina que la obligación
+reconocida contractualmente mantiene un saldo de capital pendiente
+ascendente a S/ 44,200.00, al haberse acreditado únicamente un pago
+parcial por S/ 5,400.00.
+
+</p>
+
+
+
+<p>
+
+La diferencia entre el capital reconocido y el pago efectuado evidencia
+la existencia de un saldo pendiente de cumplimiento económico, cuya
+liquidación integral incorpora los intereses determinados conforme a las
+condiciones pactadas.
+
+</p>
+
+
+
+<p>
+
+El resultado final de la liquidación financiera constituye la base
+técnica para la elaboración de los gráficos financieros incorporados en
+los Anexos Técnicos N.º 06, N.º 07 y N.º 08.
+
+</p>
+
+
+
+<div class="footer">
+
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+
+<div>
+
+ANEXO TÉCNICO N.º 05
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 06                    -->
+<!--        GRÁFICO N.º 01 - EVOLUCIÓN DEL CAPITAL        -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 06
+
+</h2>
+
+<h3>
+
+REPRESENTACIÓN GRÁFICA DEL CAPITAL
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+<h1>
+
+ANEXO TÉCNICO N.º 06
+
+</h1>
+
+<h2>
+
+GRÁFICO N.º 01
+
+</h2>
+
+<h3 style="text-align:center;">
+
+EVOLUCIÓN DEL SALDO DE CAPITAL DURANTE EL CRONOGRAMA CONTRACTUAL
+
+</h3>
+
+<p>
+
+El presente gráfico representa la evolución del saldo de capital
+durante la ejecución del cronograma financiero reconstruido por el
+suscrito Perito Contable.
+
+</p>
+
+<div style="
+
+width:100%;
+height:430px;
+margin:auto;
+
+">
+
+<canvas id="graficoCapital"></canvas>
+
+</div>
+
+<p class="fuente">
+
+<strong>Fuente:</strong>
+
+Elaboración propia del Perito Contable conforme al cronograma financiero
+desarrollado en el Anexo Técnico N.º 02.
+
+</p>
+
+<h2>
+
+INTERPRETACIÓN PERICIAL
+
+</h2>
+
+<p>
+
+El gráfico evidencia el comportamiento decreciente del saldo de capital
+durante la vigencia del cronograma contractual.
+
+</p>
+
+<p>
+
+Durante los primeros períodos la disminución del capital es moderada,
+debido a que una mayor proporción de cada cuota corresponde al pago de
+intereses convencionales.
+
+</p>
+
+<p>
+
+Conforme disminuye el saldo insoluto, la participación de la
+amortización aumenta progresivamente, produciendo una reducción más
+acelerada del capital pendiente.
+
+</p>
+
+<p>
+
+Esta representación gráfica permite corroborar visualmente la
+consistencia del cronograma financiero reconstruido y constituye un
+elemento complementario para la interpretación de la liquidación
+económica desarrollada en el Anexo Técnico N.º 05.
+
+</p>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+ANEXO TÉCNICO N.º 06
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 07                    -->
+<!--     GRÁFICO N.º 02 – INTERÉS VS AMORTIZACIÓN         -->
+<!-- ===================================================== -->
+
+<div class="page">
+
+<div class="header">
+
+<div class="header-left">
+
+</div>
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 07
+
+</h2>
+
+<h3>
+
+ANÁLISIS GRÁFICO DE LOS COMPONENTES DE LA CUOTA
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+<h1>
+
+ANEXO TÉCNICO N.º 07
+
+</h1>
+
+<h2>
+
+GRÁFICO N.º 02
+
+</h2>
+
+<h3 style="text-align:center;">
+
+COMPORTAMIENTO DEL INTERÉS Y LA AMORTIZACIÓN DURANTE EL PLAZO CONTRACTUAL
+
+</h3>
+
+<p>
+
+El presente gráfico compara la evolución de los intereses convencionales
+y de la amortización del capital durante cada uno de los períodos del
+cronograma financiero reconstruido.
+
+</p>
+
+<div style="
+
+width:100%;
+height:430px;
+margin:auto;
+padding:10px;
+border:1px solid #B5B5B5;
+background:#FAFAFA;
+
+">
+
+<canvas id="graficoInteresAmortizacion"></canvas>
+
+</div>
+
+<p class="fuente">
+
+<strong>Fuente:</strong>
+
+Cronograma financiero elaborado por el Perito Contable (véase Anexo
+Técnico N.º 02).
+
+</p>
+
+<h2>
+
+ANÁLISIS PERICIAL
+
+</h2>
+
+<p>
+
+La representación gráfica evidencia que durante los primeros períodos la
+mayor parte de la cuota se destina al pago de intereses convencionales,
+mientras que la amortización del capital representa una proporción
+menor.
+
+</p>
+
+<p>
+
+Conforme disminuye el saldo insoluto, los intereses decrecen
+progresivamente y aumenta la amortización aplicada al capital, fenómeno
+propio de un sistema de cuotas periódicas con intereses calculados sobre
+el saldo pendiente.
+
+</p>
+
+<p>
+
+La información representada guarda correspondencia con el cronograma
+financiero reconstruido y constituye un elemento visual que facilita la
+comprensión del comportamiento económico de la obligación.
+
+</p>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
 ANEXO TÉCNICO N.º 07
 
 </div>
 
+</div>
 
 </div>
-<!-- ================================================= -->
-<!--          SCRIPT DE GENERACIÓN FINANCIERA           -->
-<!-- ================================================= -->
+
+<!-- ===================================================== -->
+<!--      CONFIGURACIÓN DEL GRÁFICO N.º 02               -->
+<!-- ===================================================== -->
 
 <script>
 
-/****************************************************
-DATOS CONTRACTUALES
-****************************************************/
+const ctxInteres = document.getElementById(
 
-const CAPITAL = 49600.00;
+'graficoInteresAmortizacion'
 
-const TASA = 0.025;
+);
 
-const CUOTA = 2012.05;
+new Chart(ctxInteres,{
 
-const NUM_CUOTAS = 36;
+type:'bar',
 
-const PAGO_ACREDITADO = 5400.00;
+data:{
 
+labels: etiquetasCuotas,
 
-/****************************************************
-VARIABLES DE CÁLCULO
-****************************************************/
-
-let saldo = CAPITAL;
-
-let totalInteres = 0;
-
-let totalAmortizacion = 0;
-
-let totalCuotas = 0;
-
-let datosGrafico = [];
-
-
-/****************************************************
-FORMATO MONETARIO
-****************************************************/
-
-function moneda(valor){
-
-return Number(valor).toLocaleString(
-
-'es-PE',
+datasets:[
 
 {
 
-minimumFractionDigits:2,
+label:'Interés',
 
-maximumFractionDigits:2
+data: datosInteres,
+
+backgroundColor:'#C0392B',
+
+borderColor:'#922B21',
+
+borderWidth:1
+
+},
+
+{
+
+label:'Amortización',
+
+data: datosAmortizacion,
+
+backgroundColor:'#2471A3',
+
+borderColor:'#1B4F72',
+
+borderWidth:1
 
 }
 
-);
+]
+
+},
+
+options:{
+
+responsive:true,
+
+maintainAspectRatio:false,
+
+plugins:{
+
+title:{
+
+display:true,
+
+text:'Interés vs Amortización'
+
+},
+
+legend:{
+
+position:'bottom'
 
 }
 
+},
 
-/****************************************************
-GENERACIÓN DEL CRONOGRAMA
-****************************************************/
+scales:{
 
-const tablaCronograma = document.querySelector(
+x:{
 
-"#cronograma tbody"
+title:{
 
-);
+display:true,
 
+text:'Número de cuota'
 
-let fecha = new Date(2016,9,1);
+}
 
+},
 
+y:{
 
-for(let i=1;i<=NUM_CUOTAS;i++){
+beginAtZero:true,
 
+title:{
 
-let saldoInicial = saldo;
+display:true,
 
+text:'Importe (S/)'
 
-let interes = saldoInicial * TASA;
+}
 
+}
 
-let amortizacion = CUOTA - interes;
+}
 
-
-saldo = saldoInicial - amortizacion;
-
-
-
-totalInteres += interes;
-
-totalAmortizacion += amortizacion;
-
-totalCuotas += CUOTA;
-
-
-
-datosGrafico.push({
-
-cuota:i,
-
-saldo:saldo,
-
-interes:interes,
-
-amortizacion:amortizacion
+}
 
 });
 
+</script>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 08                    -->
+<!--       GRÁFICO N.º 03 – COMPOSICIÓN DE LA DEUDA       -->
+<!-- ===================================================== -->
 
 
-let fila = document.createElement("tr");
+<div class="page">
 
 
-fila.innerHTML = `
-
-<td>
-
-${i}
-
-</td>
+<div class="header">
 
 
-<td>
+<div class="header-left">
 
-${fecha.toLocaleDateString('es-PE')}
-
-</td>
+</div>
 
 
-<td style="text-align:right">
+<div class="header-center">
 
-${moneda(saldoInicial)}
+<h2>
 
-</td>
+ANEXO TÉCNICO N.º 08
 
+</h2>
 
-<td style="text-align:right">
+<h3>
 
-${moneda(interes)}
+COMPOSICIÓN ECONÓMICA DE LA OBLIGACIÓN
 
-</td>
+</h3>
 
-
-<td style="text-align:right">
-
-${moneda(amortizacion)}
-
-</td>
+</div>
 
 
-<td style="text-align:right">
+<div class="header-right">
 
-${moneda(CUOTA)}
+2026
 
-</td>
+</div>
 
 
-<td style="text-align:right">
-
-${moneda(saldo)}
-
-</td>
-
-`;
+</div>
 
 
 
-tablaCronograma.appendChild(fila);
+<h1>
+
+ANEXO TÉCNICO N.º 08
+
+</h1>
 
 
 
-fecha.setMonth(
+<h2>
 
-fecha.getMonth()+1
+GRÁFICO N.º 03
+
+</h2>
+
+
+
+<h3 style="text-align:center;">
+
+COMPOSICIÓN DEL CAPITAL RECONOCIDO Y SALDO PENDIENTE
+
+</h3>
+
+
+
+<p>
+
+El presente gráfico representa la estructura económica de la obligación
+reconocida contractualmente, identificando la proporción correspondiente
+al pago acreditado y al saldo de capital pendiente.
+
+</p>
+
+
+
+<div style="
+
+width:100%;
+
+height:430px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border:1px solid #B5B5B5;
+
+background:#FAFAFA;
+
+">
+
+
+<canvas id="graficoComposicionDeuda"></canvas>
+
+
+</div>
+
+
+
+<p class="fuente">
+
+<strong>Fuente:</strong>
+
+Elaboración propia del Perito Contable conforme a la documentación
+contractual examinada.
+
+</p>
+
+
+
+<h2>
+
+INTERPRETACIÓN PERICIAL
+
+</h2>
+
+
+
+<p>
+
+La representación gráfica permite visualizar que, respecto del capital
+reconocido contractualmente ascendente a S/ 49,600.00, únicamente se ha
+acreditado un pago parcial por S/ 5,400.00, permaneciendo un saldo de
+capital pendiente ascendente a S/ 44,200.00.
+
+</p>
+
+
+
+<p>
+
+En términos porcentuales, el pago acreditado representa una reducción
+parcial de la obligación inicial, manteniéndose pendiente la mayor parte
+del capital reconocido por las partes.
+
+</p>
+
+
+
+<p>
+
+El presente gráfico constituye un elemento complementario de análisis y
+no sustituye la liquidación financiera desarrollada en el Anexo Técnico
+N.º 05, donde se determina el resultado económico de la obligación.
+
+</p>
+
+
+
+<div class="footer">
+
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+
+<div>
+
+ANEXO TÉCNICO N.º 08
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- ===================================================== -->
+<!--       CONFIGURACIÓN DEL GRÁFICO N.º 03              -->
+<!-- ===================================================== -->
+
+
+<script>
+
+
+const ctxComposicion = document.getElementById(
+
+'graficoComposicionDeuda'
 
 );
 
+
+
+new Chart(ctxComposicion, {
+
+
+type:'doughnut',
+
+
+data:{
+
+
+labels:[
+
+'Pago acreditado',
+
+'Saldo de capital pendiente'
+
+],
+
+
+datasets:[{
+
+label:'Composición de la obligación',
+
+
+data:[
+
+5400,
+
+44200
+
+],
+
+
+backgroundColor:[
+
+'#27AE60',
+
+'#8E44AD'
+
+],
+
+
+borderWidth:2
+
+
+}]
+
+
+},
+
+
+options:{
+
+
+responsive:true,
+
+
+maintainAspectRatio:false,
+
+
+plugins:{
+
+
+title:{
+
+
+display:true,
+
+
+text:'Composición del capital reconocido'
+
+
+},
+
+
+legend:{
+
+
+position:'bottom'
+
+
+},
+
+
+tooltip:{
+
+
+callbacks:{
+
+
+label:function(context){
+
+
+let valor=context.raw;
+
+
+let total=49600;
+
+
+let porcentaje=((valor/total)*100).toFixed(2);
+
+
+return context.label+': S/ '+
+
+valor.toLocaleString('es-PE')+
+
+' ('+porcentaje+'%)';
+
+
+}
+
+
+}
+
+
+}
 
 
 }
 
 
 
-/****************************************************
-TOTALES CRONOGRAMA
-****************************************************/
-
-
-document.getElementById("tCapital").innerHTML =
-
-moneda(CAPITAL);
-
-
-
-document.getElementById("tInteres").innerHTML =
-
-moneda(totalInteres);
-
-
-
-document.getElementById("tAmortizacion").innerHTML =
-
-moneda(totalAmortizacion);
-
-
-
-document.getElementById("tCuotas").innerHTML =
-
-moneda(totalCuotas);
-
-
-
-document.getElementById("tSaldo").innerHTML =
-
-moneda(saldo);
-
-
-
-/****************************************************
-ACTUALIZACIÓN DEL SALDO INSOLUTO
-****************************************************/
-
-
-let totalObligacion = CAPITAL + totalInteres;
-
-
-let saldoEconomico = totalObligacion - totalCuotas - PAGO_ACREDITADO;
-
-
-
-document.getElementById(
-
-"interesesGenerados"
-
-).innerHTML = moneda(totalInteres);
-
-
-
-document.getElementById(
-
-"totalObligacion"
-
-).innerHTML = moneda(totalObligacion);
-
-
-
-document.getElementById(
-
-"saldoResultante"
-
-).innerHTML = moneda(saldoEconomico);
-
-
-
-/****************************************************
-VALIDACIÓN MATEMÁTICA
-****************************************************/
-
-
-document.getElementById(
-
-"vCapital"
-
-).innerHTML = moneda(CAPITAL);
-
-
-
-document.getElementById(
-
-"vInteres"
-
-).innerHTML = moneda(totalInteres);
-
-
-
-document.getElementById(
-
-"vAmortizacion"
-
-).innerHTML = moneda(totalAmortizacion);
-
-
-
-document.getElementById(
-
-"vCuotas"
-
-).innerHTML = moneda(totalCuotas);
-
-
-
-document.getElementById(
-
-"vSaldo"
-
-).innerHTML = moneda(saldo);
-
-
-
-/****************************************************
-GRÁFICOS BÁSICOS CANVAS
-****************************************************/
-
-
-function lineaGrafico(){
-
-let canvas = document.getElementById(
-
-"graficoCapital"
-
-);
-
-
-if(!canvas) return;
-
-
-
-let ctx = canvas.getContext("2d");
-
-
-
-ctx.clearRect(
-
-0,
-
-0,
-
-canvas.width,
-
-canvas.height
-
-);
-
-
-
-ctx.beginPath();
-
-
-let max = CAPITAL;
-
-
-datosGrafico.forEach((d,i)=>{
-
-
-let x =
-
-40 +
-
-(i * 18);
-
-
-
-let y =
-
-280 -
-
-(
-
-(d.saldo/max)*220
-
-);
-
-
-
-if(i===0){
-
-ctx.moveTo(x,y);
-
-}else{
-
-ctx.lineTo(x,y);
-
 }
-
-
-});
-
-
-
-ctx.stroke();
-
-
-
-}
-
-
-
-function barrasGrafico(){
-
-
-let canvas = document.getElementById(
-
-"graficoInteres"
-
-);
-
-
-
-if(!canvas) return;
-
-
-
-let ctx = canvas.getContext("2d");
-
-
-
-ctx.clearRect(
-
-0,
-
-0,
-
-canvas.width,
-
-canvas.height
-
-);
-
-
-
-datosGrafico.forEach((d,i)=>{
-
-
-let x = 30+(i*20);
-
-
-
-let h1 = d.interes/10;
-
-
-
-let h2 = d.amortizacion/10;
-
-
-
-ctx.fillRect(
-
-x,
-
-280-h1,
-
-8,
-
-h1
-
-);
-
-
-
-ctx.fillRect(
-
-x+10,
-
-280-h2,
-
-8,
-
-h2
-
-);
 
 
 
 });
-
-
-
-}
-
-
-
-function circularGrafico(){
-
-
-let canvas = document.getElementById(
-
-"graficoCircular"
-
-);
-
-
-
-if(!canvas) return;
-
-
-
-let ctx = canvas.getContext("2d");
-
-
-
-let total = totalInteres + totalAmortizacion;
-
-
-
-let porcentajeInteres =
-
-totalInteres/total;
-
-
-
-ctx.beginPath();
-
-
-
-ctx.moveTo(380,200);
-
-
-
-ctx.arc(
-
-380,
-
-200,
-
-100,
-
-0,
-
-Math.PI*2*porcentajeInteres
-
-);
-
-
-
-ctx.closePath();
-
-
-
-ctx.fill();
-
-
-
-}
-
-
-
-lineaGrafico();
-
-barrasGrafico();
-
-circularGrafico();
-
 
 
 </script>
+<!-- ===================================================== -->
+<!--              ANEXO TÉCNICO N.º 09                    -->
+<!--     VALIDACIÓN MATEMÁTICA Y CONTROL DE CONSISTENCIA  -->
+<!-- ===================================================== -->
 
+<div class="page">
 
-<!-- ================================================= -->
-<!--              CIERRE DEL DOCUMENTO                 -->
-<!-- ================================================= -->
+<div class="header">
 
-</body>
+<div class="header-left">
 
-</html>
+</div>
+
+<div class="header-center">
+
+<h2>
+
+ANEXO TÉCNICO N.º 09
+
+</h2>
+
+<h3>
+
+VALIDACIÓN MATEMÁTICA Y CONTROL DE CONSISTENCIA
+
+</h3>
+
+</div>
+
+<div class="header-right">
+
+2026
+
+</div>
+
+</div>
+
+<h1>
+
+ANEXO TÉCNICO N.º 09
+
+</h1>
+
+<h2>
+
+CONTROL DE CONSISTENCIA DE LA RECONSTRUCCIÓN FINANCIERA
+
+</h2>
+
+<p>
+
+El presente Anexo Técnico tiene por finalidad verificar la consistencia
+matemática de la reconstrucción financiera desarrollada en el presente
+Informe Pericial Contable, comprobando que los cálculos efectuados
+mantienen concordancia con la documentación examinada y con los
+parámetros contractuales pactados.
+
+</p>
+
+<div class="caption">
+
+CUADRO N.º 09-A
+
+<br>
+
+CONTROL DE CONSISTENCIA FINANCIERA
+
+</div>
+
+<table>
+
+<tr>
+
+<th>
+
+VARIABLE DE CONTROL
+
+</th>
+
+<th style="width:25%;">
+
+RESULTADO
+
+</th>
+
+<th style="width:18%;">
+
+ESTADO
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+Capital reconocido contractualmente
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 49,600.00
+
+</td>
+
+<td style="text-align:center;color:#1E8449;">
+
+✔ Conforme
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Pago acreditado documentalmente
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 5,400.00
+
+</td>
+
+<td style="text-align:center;color:#1E8449;">
+
+✔ Conforme
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Saldo de capital
+
+</td>
+
+<td style="text-align:right;">
+
+S/ 44,200.00
+
+</td>
+
+<td style="text-align:center;color:#1E8449;">
+
+✔ Conforme
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Cronograma financiero
+
+</td>
+
+<td>
+
+36 períodos
+
+</td>
+
+<td style="text-align:center;color:#1E8449;">
+
+✔ Conforme
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Liquidación de intereses
+
+</td>
+
+<td id="validacionInteres">
+
+Calculada automáticamente
+
+</td>
+
+<td style="text-align:center;color:#1E8449;">
+
+✔ Conforme
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Resultado final
+
+</th>
+
+<th id="validacionTotal">
+
+Generado automáticamente
+
+</th>
+
+<th style="text-align:center;background:#D5F5E3;">
+
+VALIDADO
+
+</th>
+
+</tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+<h2>
+
+DECLARACIÓN TÉCNICA DEL PERITO
+
+</h2>
+
+<p>
+
+Como resultado del procedimiento de validación efectuado, se concluye
+que la reconstrucción financiera desarrollada mantiene consistencia
+matemática con la documentación examinada, los parámetros económicos
+contenidos en el Contrato Privado de Reconocimiento de Deuda y
+Compromiso de Pago y los procedimientos técnicos aplicados durante el
+desarrollo de la presente pericia.
+
+</p>
+
+<p>
+
+Las diferencias económicas determinadas en la liquidación financiera se
+encuentran sustentadas en los cálculos incorporados en el cronograma
+desarrollado en el Anexo Técnico N.º 02 y en la liquidación contenida en
+el Anexo Técnico N.º 05, constituyendo el soporte técnico del presente
+dictamen.
+
+</p>
+
+<div class="caption">
+
+CUADRO N.º 09-B
+
+<br>
+
+REFERENCIA CRUZADA DE LOS ANEXOS
+
+</div>
+
+<table>
+
+<tr>
+
+<th>
+
+ANEXO
+
+</th>
+
+<th>
+
+CONTENIDO
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 01
+
+</td>
+
+<td>
+
+Documentación examinada.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 02
+
+</td>
+
+<td>
+
+Cronograma financiero contractual.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 03
+
+</td>
+
+<td>
+
+Matriz de reconstrucción financiera.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 04
+
+</td>
+
+<td>
+
+Aplicación del pago acreditado.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 05
+
+</td>
+
+<td>
+
+Liquidación financiera.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 06
+
+</td>
+
+<td>
+
+Gráfico N.º 01 – Evolución del capital.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 07
+
+</td>
+
+<td>
+
+Gráfico N.º 02 – Interés vs Amortización.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Anexo Técnico N.º 08
+
+</td>
+
+<td>
+
+Gráfico N.º 03 – Composición económica.
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="fuente">
+
+Fuente: Elaboración propia del Perito Contable.
+
+</div>
+
+<div class="footer">
+
+<div>
+
+C.P.C. JESÚS ÁNGEL CÁRDENAS SIMON
+
+</div>
+
+<div>
+
+ANEXO TÉCNICO N.º 09
+
+</div>
+
+</div>
+
+</div>
